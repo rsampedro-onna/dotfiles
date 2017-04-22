@@ -1,0 +1,422 @@
+! vim: foldmethod=marker
+
+! xterm settings {{{1
+
+xterm*faceName:        DejaVu Sans Mono
+! xterm*faceName:         Source Code Pro
+! I was using Droid Sans Mono before, but it doesn't support some IPA glyphs
+! I tested, and unfortunately xterm doesn't allow the use of fallback fonts.
+! I then tested combining characters, and though sequences like "o" plus
+! combining tilde do work, sequences such as mid-open vowel plus combining
+! tilde don't
+xterm*faceSize:        18
+xterm*loginShell:      false
+xterm*vt100*geometry:  140x40
+xterm*saveLines:       2000
+xterm*charClass:       33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
+xterm*termName:        xterm-color
+xterm*eightBitInput:   false
+/* xterm*modifyOtherKeys: true */
+/* this value was actually not being used, and when I invoked xterm from
+ * another terminal window, I got this: "Warning: Cannot convert string "true"
+ * to type Int" */
+
+xterm*VT100.Translations: #override \
+  <Key>BackSpace: string(0x7F)\n\
+  <Key>Delete:    string("\033[3~")\n\
+  <Key>Home:      string("\033[1~")\n\
+  <Key>End:       string("\033[4~")
+
+! xterm solarized light {{{2
+
+! xterm*background:              #fdf6e3
+! xterm*foreground:              #657b83
+! xterm*fading:                  40
+! xterm*fadeColor:               #fdf6e3
+! xterm*cursorColor:             #586e75
+! xterm*pointerColorBackground:  #93a1a1
+! xterm*pointerColorForeground:  #586e75
+
+! xterm*color0:                  #eee8d5
+! xterm*color1:                  #dc322f
+! xterm*color2:                  #859900
+! xterm*color3:                  #b58900
+! xterm*color4:                  #268bd2
+! xterm*color5:                  #d33682
+! xterm*color6:                  #2aa198
+! xterm*color7:                  #073642
+! xterm*color9:                  #cb4b16
+! xterm*color8:                  #fdf6e3
+! xterm*color10:                 #93a1a1
+! xterm*color11:                 #839496
+! xterm*color12:                 #657b83
+! xterm*color13:                 #6c71c4
+! xterm*color14:                 #586e75
+! xterm*color15:                 #002b36
+
+! xterm solarized light }}}2
+
+! xterm solarized dark {{{2
+
+!xterm*background:             #002b36
+!xterm*foreground:             #657b83
+!xterm*fading:                 40
+!xterm*fadeColor:              #002b36
+!xterm*cursorColor:            #93a1a1
+!xterm*pointerColorBackground: #586e75
+!xterm*pointerColorForeground: #93a1a1
+! 
+!xterm*color0:   #073642
+!xterm*color8:   #002b36
+!xterm*color1:   #dc322f
+!xterm*color9:   #cb4b16
+!xterm*color2:   #859900
+!xterm*color10:  #586e75
+!xterm*color3:   #b58900
+!xterm*color11:  #657b83
+!xterm*color4:   #268bd2
+!xterm*color12:  #839496
+!xterm*color5:   #d33682
+!xterm*color13:  #6c71c4
+!xterm*color6:   #2aa198
+!xterm*color14:  #93a1a1
+!xterm*color7:   #eee8d5
+!xterm*color15:  #fdf6e3
+
+! xterm solarized dark }}}2
+
+! xterm seoul256 {{{2
+
+xterm*background: #3a3a3a 
+xterm*foreground: #d0d0d0 
+xterm*cursorColor: #d0d0d0
+
+xterm*color0: #4e4e4e
+xterm*color1: #d68787 
+xterm*color2: #5f865f
+xterm*color3: #d8af5f
+xterm*color4: #85add4
+xterm*color5: #d7afaf
+xterm*color6: #87afaf
+xterm*color7: #d0d0d0
+xterm*color8: #626262
+xterm*color9: #d75f87
+xterm*color10: #87af87
+xterm*color11: #ffd787 
+xterm*color12: #add4fb
+xterm*color13: #ffafaf
+xterm*color14: #87d7d7
+xterm*color15: #e4e4e4
+xterm*colorBD: #e4e4e4
+ 
+! xterm seoul256 }}}2
+
+! xterm settings }}}1
+
+! urxvt settings {{{1
+
+! basic settings {{{2
+ 
+!!! I believe the following setting is being overwritten later !!!
+!! Xft*dpi:               96                                    !!
+
+Xft*antialias:         false
+Xft*hinting:           false
+Xft*rgba:              none
+
+URxvt*termName:        rxvt-unicode-256color
+URxvt*geometry:        140x40
+! URxvt.font:            xft:FiraMono:pixelsize=23
+! URxvt.font:            xft:DroidSansMonoSlashed:pixelsize=24
+URxvt.font:            xft:Hack:pixelsize=21,\
+                       xft:SourceCodePro,\
+                       xft:DejaVuSansMono,\
+                       xft:Symbola,\
+                       xft:Unifont
+! URxvt.font:            xft:DejaVuSansMono:pixelsize=21
+! URxvt.font:            xft:Symbola:pixelsize=21,
+! URxvt.font:            xft:Monoid:pixelsize=24
+URxvt*letterSpace:     -1
+URxvt*perl-ext-common: default,matcher,-readline,-tabbed,font-size,fullscreen
+URxvt*url-launcher:    urlLauncher.sh
+URxvt*matcher.button:  1
+URxvt*scrollBar:       false
+URxvt*saveLines:       10000
+URxvt*scrollTtyOutput: false
+URxvt*iso14755:        False
+URxvt*cursorBlink:     0
+
+! Keybindings
+
+URxvt.keysym.C-Up:     perl:font-size:increase
+URxvt.keysym.C-Down:   perl:font-size:decrease
+URxvt.keysym.C-S-Up:   perl:font-size:incglobal
+URxvt.keysym.C-S-Down: perl:font-size:decglobal
+URxvt.keysym.F11:      perl:fullscreen:switch
+URxvt.keysym.C-Tab:    \033[27;5;9~
+URxvt.keysym.C-1:      \033[27;5;49~
+URxvt.keysym.C-2:      \033[27;5;50~
+URxvt.keysym.C-3:      \033[27;5;51~
+URxvt.keysym.C-4:      \033[27;5;52~
+URxvt.keysym.C-5:      \033[27;5;53~
+URxvt.keysym.C-6:      \033[27;5;54~
+URxvt.keysym.C-7:      \033[27;5;55~
+URxvt.keysym.C-8:      \033[27;5;56~
+URxvt.keysym.C-9:      \033[27;5;57~
+URxvt.keysym.C-0:      \033[27;5;48~
+! URxvt.keysym.S-Space:  \033<S-Space>
+
+! }}}2
+
+! urxvt monokai {{{2
+
+! URxvt*background: #212121
+! URxvt*foreground: #C0C0C0
+ 
+! URxvt*color0:     rgb:00/00/00
+! URxvt*color1:     rgb:e0/10/10
+! URxvt*color2:     rgb:20/ad/20
+! URxvt*color3:     rgb:d4/c2/4f
+! URxvt*color4:     rgb:23/1b/b8
+! URxvt*color5:     rgb:9c/38/85
+! URxvt*color6:     rgb:1d/bd/b8
+! URxvt*color7:     rgb:fe/fe/fe
+! URxvt*color8:     rgb:6a/6a/6a
+! URxvt*color9:     rgb:e8/3a/3d
+! URxvt*color10:    rgb:35/e9/56
+! URxvt*color11:    rgb:ff/ff/2f
+! URxvt*color12:    rgb:3a/53/f0
+! URxvt*color13:    rgb:e6/28/ba
+! URxvt*color14:    rgb:1c/f5/f5
+! URxvt*color15:    rgb:ff/ff/ff
+
+! urxvt monokai }}}2
+
+! urxvt zenburn {{{2
+
+! URxvt*background: #2B2B2B
+! URxvt*foreground: #DEDEDE
+! URxvt*colorUL: #86a2b0
+!  
+! URxvt*color0  : #2E3436
+! URxvt*color8  : #555753
+! URxvt*color1  : #CC0000
+! URxvt*color9  : #EF2929
+! URxvt*color2  : #4E9A06
+! URxvt*color10 : #8AE234
+! URxvt*color3  : #C4A000
+! URxvt*color11 : #FCE94F
+! URxvt*color4  : #3465A4
+! URxvt*color12 : #729FCF
+! URxvt*color5  : #75507B
+! URxvt*color13 : #AD7FA8
+! URxvt*color6  : #06989A
+! URxvt*color14 : #34E2E2
+! URxvt*color7  : #D3D7CF
+! URxvt*color15 : #EEEEEC
+
+! urxvt zenburn }}}2
+
+! urxvt solarized dark {{{2
+
+! URxvt*background:             #002b36
+! URxvt*foreground:             #657b83
+! URxvt*fading:                 0
+! URxvt*fadeColor:              #002b36
+! URxvt*cursorColor:            #93a1a1
+! URxvt*pointerColorBackground: #586e75
+! URxvt*pointerColorForeground: #93a1a1
+
+! URxvt*color0:   #073642
+! URxvt*color8:   #002b36
+! URxvt*color1:   #dc322f
+! URxvt*color9:   #cb4b16
+! URxvt*color2:   #859900
+! URxvt*color10:  #586e75
+! URxvt*color3:   #b58900
+! URxvt*color11:  #657b83
+! URxvt*color4:   #268bd2
+! URxvt*color12:  #839496
+! URxvt*color5:   #d33682
+! URxvt*color13:  #6c71c4
+! URxvt*color6:   #2aa198
+! URxvt*color14:  #93a1a1
+! URxvt*color7:   #eee8d5
+! URxvt*color15:  #fdf6e3
+
+! urxvt solarized dark }}}2
+
+! urxvt solarized light {{{2
+
+! URxvt*background:              #fdf6e3
+! URxvt*foreground:              #657b83
+! URxvt*fading:                  0
+! URxvt*fadeColor:               #fdf6e3
+! URxvt*cursorColor:             #586e75
+! URxvt*pointerColorBackground:  #93a1a1
+! URxvt*pointerColorForeground:  #586e75
+
+! URxvt*color0:                  #eee8d5
+! URxvt*color1:                  #dc322f
+! URxvt*color2:                  #859900
+! URxvt*color3:                  #b58900
+! URxvt*color4:                  #268bd2
+! URxvt*color5:                  #d33682
+! URxvt*color6:                  #2aa198
+! URxvt*color7:                  #073642
+! URxvt*color9:                  #cb4b16
+! URxvt*color8:                  #fdf6e3
+! URxvt*color10:                 #93a1a1
+! URxvt*color11:                 #839496
+! URxvt*color12:                 #657b83
+! URxvt*color13:                 #6c71c4
+! URxvt*color14:                 #586e75
+! URxvt*color15:                 #002b36
+ 
+! urxvt solarized light }}}2
+
+! urxvt seoul256 {{{2
+!
+! urxvt*background: #3a3a3a 
+! urxvt*foreground: #d0d0d0 
+! urxvt*color0: #4e4e4e
+! urxvt*color1: #d68787 
+! urxvt*color2: #5f865f
+! urxvt*color3: #d8af5f
+! urxvt*color4: #85add4
+! urxvt*color5: #d7afaf
+! urxvt*color6: #87afaf
+! urxvt*color7: #d0d0d0
+! urxvt*color8: #626262
+! urxvt*color9: #d75f87
+! urxvt*color10: #87af87
+! urxvt*color11: #ffd787 
+! urxvt*color12: #add4fb
+! urxvt*color13: #ffafaf
+! urxvt*color14: #87d7d7
+! urxvt*color15: #e4e4e4
+! urxvt*cursorcolor: #d0d0d0
+! urxvt*cursorcolor2: #3a3a3a
+! urxvt*colorbd: #e4e4e4
+!
+! urxvt seoul256 }}}2
+
+! urxvt gruvbox {{{2
+
+! ! -----------------------------------------------------------------------------
+! ! File: gruvbox-dark.xresources
+! ! Description: Retro groove colorscheme generalized
+! ! Author: morhetz <morhetz@gmail.com>
+! ! Source: https://github.com/morhetz/gruvbox-generalized
+! ! Last Modified: 6 Sep 2014
+! ! -----------------------------------------------------------------------------
+! 
+! ! hard contrast: URxvt.background: #1d2021
+! URxvt.background: #282828
+! ! soft contrast: URxvt.background: #32302f
+! URxvt.foreground: #ebdbb2
+! ! Black + DarkGrey
+! URxvt.color0:  #282828
+! URxvt.color8:  #928374
+! ! DarkRed + Red
+! URxvt.color1:  #cc241d
+! URxvt.color9:  #fb4934
+! ! DarkGreen + Green
+! URxvt.color2:  #98971a
+! URxvt.color10: #b8bb26
+! ! DarkYellow + Yellow
+! URxvt.color3:  #d79921
+! URxvt.color11: #fabd2f
+! ! DarkBlue + Blue
+! URxvt.color4:  #458588
+! URxvt.color12: #83a598
+! ! DarkMagenta + Magenta
+! URxvt.color5:  #b16286
+! URxvt.color13: #d3869b
+! ! DarkCyan + Cyan
+! URxvt.color6:  #689d6a
+! URxvt.color14: #8ec07c
+! ! LightGrey + White
+! URxvt.color7:  #a89984
+! URxvt.color15: #ebdbb2
+! 
+! ! -----------------------------------------------------------------------------
+! ! File: gruvbox-urxvt256.xresources
+! ! Description: Retro groove colorscheme generalized
+! ! Author: morhetz <morhetz@gmail.com>
+! ! Source: https://github.com/morhetz/gruvbox-generalized
+! ! Last Modified: 13 Dec 2013
+! ! -----------------------------------------------------------------------------
+! 
+! URxvt.color24:  #076678
+! URxvt.color66:  #427b58
+! URxvt.color88:  #9d0006
+! URxvt.color96:  #8f3f71
+! URxvt.color100: #79740e
+! URxvt.color108: #8ec07c
+! URxvt.color109: #83a598
+! URxvt.color130: #af3a03
+! URxvt.color136: #b57614
+! URxvt.color142: #b8bb26
+! URxvt.color167: #fb4934
+! URxvt.color175: #d3869b
+! URxvt.color208: #fe8019
+! URxvt.color214: #fabd2f
+! URxvt.color223: #ebdbb2
+! URxvt.color228: #f2e5bc
+! URxvt.color229: #fbf1c7
+! URxvt.color230: #f9f5d7
+! URxvt.color234: #1d2021
+! URxvt.color235: #282828
+! URxvt.color236: #32302f
+! URxvt.color237: #3c3836
+! URxvt.color239: #504945
+! URxvt.color241: #665c54
+! URxvt.color243: #7c6f64
+! URxvt.color244: #928374
+! URxvt.color245: #928374
+! URxvt.color246: #a89984
+! URxvt.color248: #bdae93
+! URxvt.color250: #d5c4a1
+ 
+! urxvt gruvbox }}}2
+
+! urxvt base16 {{{2
+
+! Base16 Default Dark
+! Scheme: Chris Kempson (http://chriskempson.com)
+
+*.foreground:   #d8d8d8
+*.background:   #181818
+*.cursorColor:  #d8d8d8
+
+*.color0:       #181818
+*.color1:       #ab4642
+*.color2:       #a1b56c
+*.color3:       #f7ca88
+*.color4:       #7cafc2
+*.color5:       #ba8baf
+*.color6:       #86c1b9
+*.color7:       #d8d8d8
+
+*.color8:       #585858
+*.color9:       #ab4642
+*.color10:      #a1b56c
+*.color11:      #f7ca88
+*.color12:      #7cafc2
+*.color13:      #ba8baf
+*.color14:      #86c1b9
+*.color15:      #f8f8f8
+
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! use 'shell' template to set these if necessary
+*.color16:      #dc9656
+*.color17:      #a16946
+*.color18:      #282828
+*.color19:      #383838
+*.color20:      #b8b8b8
+*.color21:      #e8e8e8
+
+! urxvt base16 }}}2
+
+! urxvt settings }}}1
