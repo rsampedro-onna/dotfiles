@@ -253,6 +253,7 @@ exec --no-startup-id insync start
 exec --no-startup-id nm-applet
 exec --no-startup-id /usr/lib/gnome-settings-daemon/gnome-settings-daemon
 exec urxvttmux.sh
+exec xwrits typetime=30 breaktime=3 +breakclock after=5 +multiply
 
 # application shortcuts
 bindsym $mod+c exec google-chrome-stable
