@@ -19,12 +19,14 @@
 [submodule ".vim/bundle/goyo.vim"]
 	path = .vim/bundle/goyo.vim
 	url = https://github.com/junegunn/goyo.vim
+  ignore = dirty
 [submodule ".vim/bundle/gv.vim"]
 	path = .vim/bundle/gv.vim
 	url = https://github.com/junegunn/gv.vim
 [submodule ".vim/bundle/ingo-library"]
 	path = .vim/bundle/ingo-library
 	url = https://github.com/vim-scripts/ingo-library
+  ignore = dirty
 [submodule ".vim/bundle/jedi-vim"]
 	path = .vim/bundle/jedi-vim
 	url = https://github.com/davidhalter/jedi-vim
@@ -58,9 +60,11 @@
 [submodule ".vim/bundle/smartpairs.vim"]
 	path = .vim/bundle/smartpairs.vim
 	url = https://github.com/gorkunov/smartpairs.vim.git
+  ignore = dirty
 [submodule ".vim/bundle/SyntaxRange"]
 	path = .vim/bundle/SyntaxRange
 	url = https://github.com/vim-scripts/SyntaxRange
+  ignore = dirty
 [submodule ".vim/bundle/tabfold"]
 	path = .vim/bundle/tabfold
 	url = https://github.com/thalesmello/tabfold
@@ -85,6 +89,7 @@
 [submodule ".vim/bundle/utl.vim"]
 	path = .vim/bundle/utl.vim
 	url = https://github.com/vim-scripts/utl.vim
+  ignore = dirty
 [submodule ".vim/bundle/vim-abolish"]
 	path = .vim/bundle/vim-abolish
 	url = git://github.com/tpope/vim-abolish.git
@@ -118,6 +123,7 @@
 [submodule ".vim/bundle/vim-highlightedyank"]
 	path = .vim/bundle/vim-highlightedyank
 	url = https://github.com/machakann/vim-highlightedyank
+  ignore = dirty
 [submodule ".vim/bundle/vim-hug-neovim-rpc"]
 	path = .vim/bundle/vim-hug-neovim-rpc
 	url = https://github.com/roxma/vim-hug-neovim-rpc
@@ -127,6 +133,7 @@
 [submodule ".vim/bundle/vim-LanguageTool"]
 	path = .vim/bundle/vim-LanguageTool
 	url = https://github.com/dpelle/vim-LanguageTool
+  ignore = dirty
 [submodule ".vim/bundle/vim-mundo"]
 	path = .vim/bundle/vim-mundo
 	url = https://github.com/simnalamburt/vim-mundo
@@ -193,15 +200,18 @@
 [submodule ".vim/bundle/vim-textobj-indent"]
 	path = .vim/bundle/vim-textobj-indent
 	url = https://github.com/kana/vim-textobj-indent
+  ignore = dirty
 [submodule ".vim/bundle/vim-textobj-latex"]
 	path = .vim/bundle/vim-textobj-latex
 	url = git://github.com/rbonvall/vim-textobj-latex
+  ignore = dirty
 [submodule ".vim/bundle/vim-textobj-quote"]
 	path = .vim/bundle/vim-textobj-quote
 	url = https://github.com/reedes/vim-textobj-quote
 [submodule ".vim/bundle/vim-textobj-user"]
 	path = .vim/bundle/vim-textobj-user
 	url = git://github.com/kana/vim-textobj-user
+  ignore = dirty
 [submodule ".vim/bundle/vim-tmux-focus-events"]
 	path = .vim/bundle/vim-tmux-focus-events
 	url = https://github.com/tmux-plugins/vim-tmux-focus-events
