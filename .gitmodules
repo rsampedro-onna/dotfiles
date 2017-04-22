@@ -1,0 +1,225 @@
+[submodule ".vim/bundle/base16-vim"]
+	path = .vim/bundle/base16-vim
+	url = https://github.com/chriskempson/base16-vim.git
+[submodule ".vim/bundle/comfortable-motion.vim"]
+	path = .vim/bundle/comfortable-motion.vim
+	url = https://github.com/yuttie/comfortable-motion.vim
+[submodule ".vim/bundle/deoplete-jedi"]
+	path = .vim/bundle/deoplete-jedi
+	url = https://github.com/zchee/deoplete-jedi
+[submodule ".vim/bundle/deoplete.nvim"]
+	path = .vim/bundle/deoplete.nvim
+	url = https://github.com/Shougo/deoplete.nvim
+[submodule ".vim/bundle/flappyvird-vim"]
+	path = .vim/bundle/flappyvird-vim
+	url = https://github.com/mattn/flappyvird-vim
+[submodule ".vim/bundle/fzf.vim"]
+	path = .vim/bundle/fzf.vim
+	url = https://github.com/junegunn/fzf.vim
+[submodule ".vim/bundle/goyo.vim"]
+	path = .vim/bundle/goyo.vim
+	url = https://github.com/junegunn/goyo.vim
+[submodule ".vim/bundle/gv.vim"]
+	path = .vim/bundle/gv.vim
+	url = https://github.com/junegunn/gv.vim
+[submodule ".vim/bundle/ingo-library"]
+	path = .vim/bundle/ingo-library
+	url = https://github.com/vim-scripts/ingo-library
+[submodule ".vim/bundle/jedi-vim"]
+	path = .vim/bundle/jedi-vim
+	url = https://github.com/davidhalter/jedi-vim
+[submodule ".vim/bundle/limelight.vim"]
+	path = .vim/bundle/limelight.vim
+	url = https://github.com/junegunn/limelight.vim
+[submodule ".vim/bundle/neco-look"]
+	path = .vim/bundle/neco-look
+	url = https://github.com/ujihisa/neco-look/
+[submodule ".vim/bundle/netrw"]
+	path = .vim/bundle/netrw
+	url = https://github.com/eiginn/netrw
+[submodule ".vim/bundle/NrrwRgn"]
+	path = .vim/bundle/NrrwRgn
+	url = https://github.com/chrisbra/NrrwRgn
+[submodule ".vim/bundle/nvim-completion-manager"]
+	path = .vim/bundle/nvim-completion-manager
+	url = https://github.com/roxma/nvim-completion-manager
+[submodule ".vim/bundle/vim-markdown"]
+	path = .vim/bundle/vim-markdown
+	url = https://github.com/plasticboy/vim-markdown
+[submodule ".vim/bundle/rainbow_parentheses.vim"]
+	path = .vim/bundle/rainbow_parentheses.vim
+	url = https://github.com/junegunn/rainbow_parentheses.vim
+[submodule ".vim/bundle/repmo.vim"]
+	path = .vim/bundle/repmo.vim
+	url = https://github.com/vim-scripts/repmo.vim
+[submodule ".vim/bundle/seoul256.vim"]
+	path = .vim/bundle/seoul256.vim
+	url = https://github.com/junegunn/seoul256.vim.git
+[submodule ".vim/bundle/smartpairs.vim"]
+	path = .vim/bundle/smartpairs.vim
+	url = https://github.com/gorkunov/smartpairs.vim.git
+[submodule ".vim/bundle/SyntaxRange"]
+	path = .vim/bundle/SyntaxRange
+	url = https://github.com/vim-scripts/SyntaxRange
+[submodule ".vim/bundle/tabfold"]
+	path = .vim/bundle/tabfold
+	url = https://github.com/thalesmello/tabfold
+[submodule ".vim/bundle/targets.vim"]
+	path = .vim/bundle/targets.vim
+	url = https://github.com/wellle/targets.vim
+[submodule ".vim/bundle/TeX-9"]
+	path = .vim/bundle/TeX-9
+	url = https://github.com/vim-scripts/TeX-9
+[submodule ".vim/bundle/thesaurus_query.vim"]
+	path = .vim/bundle/thesaurus_query.vim
+	url = https://github.com/ron89/thesaurus_query.vim
+[submodule ".vim/bundle/tmux-complete.vim"]
+	path = .vim/bundle/tmux-complete.vim
+	url = https://github.com/wellle/tmux-complete.vim
+[submodule ".vim/bundle/ultisnips"]
+	path = .vim/bundle/ultisnips
+	url = https://github.com/SirVer/ultisnips
+[submodule ".vim/bundle/unicode.vim"]
+	path = .vim/bundle/unicode.vim
+	url = https://github.com/chrisbra/unicode.vim
+[submodule ".vim/bundle/utl.vim"]
+	path = .vim/bundle/utl.vim
+	url = https://github.com/vim-scripts/utl.vim
+[submodule ".vim/bundle/vim-abolish"]
+	path = .vim/bundle/vim-abolish
+	url = git://github.com/tpope/vim-abolish.git
+[submodule ".vim/bundle/vim-characterize"]
+	path = .vim/bundle/vim-characterize
+	url = git://github.com/tpope/vim-characterize.git
+[submodule ".vim/bundle/vim-colors-solarized"]
+	path = .vim/bundle/vim-colors-solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule ".vim/bundle/vim-commentary"]
+	path = .vim/bundle/vim-commentary
+	url = git://github.com/tpope/vim-commentary.git
+[submodule ".vim/bundle/vim-diminactive"]
+	path = .vim/bundle/vim-diminactive
+	url = https://github.com/blueyed/vim-diminactive
+[submodule ".vim/bundle/vim-easy-align"]
+	path = .vim/bundle/vim-easy-align
+	url = https://github.com/junegunn/vim-easy-align
+[submodule ".vim/bundle/vim-eunuch"]
+	path = .vim/bundle/vim-eunuch
+	url = git://github.com/tpope/vim-eunuch.git
+[submodule ".vim/bundle/vim-flagship"]
+	path = .vim/bundle/vim-flagship
+	url = https://github.com/tpope/vim-flagship
+[submodule ".vim/bundle/vim-fugitive"]
+	path = .vim/bundle/vim-fugitive
+	url = git://github.com/tpope/vim-fugitive.git
+[submodule ".vim/bundle/vim-gitgutter"]
+	path = .vim/bundle/vim-gitgutter
+	url = git://github.com/airblade/vim-gitgutter.git
+[submodule ".vim/bundle/vim-highlightedyank"]
+	path = .vim/bundle/vim-highlightedyank
+	url = https://github.com/machakann/vim-highlightedyank
+[submodule ".vim/bundle/vim-hug-neovim-rpc"]
+	path = .vim/bundle/vim-hug-neovim-rpc
+	url = https://github.com/roxma/vim-hug-neovim-rpc
+[submodule ".vim/bundle/vim-indentwise"]
+	path = .vim/bundle/vim-indentwise
+	url = https://github.com/jeetsukumaran/vim-indentwise
+[submodule ".vim/bundle/vim-LanguageTool"]
+	path = .vim/bundle/vim-LanguageTool
+	url = https://github.com/dpelle/vim-LanguageTool
+[submodule ".vim/bundle/vim-mundo"]
+	path = .vim/bundle/vim-mundo
+	url = https://github.com/simnalamburt/vim-mundo
+[submodule ".vim/bundle/vim-obsession"]
+	path = .vim/bundle/vim-obsession
+	url = git://github.com/tpope/vim-obsession.git
+[submodule ".vim/bundle/vim-orgmode"]
+	path = .vim/bundle/vim-orgmode
+	url = https://github.com/jceb/vim-orgmode
+[submodule ".vim/bundle/vim-pandoc"]
+	path = .vim/bundle/vim-pandoc
+	url = https://github.com/vim-pandoc/vim-pandoc
+[submodule ".vim/bundle/vim-pandoc-after"]
+	path = .vim/bundle/vim-pandoc-after
+	url = https://github.com/vim-pandoc/vim-pandoc-after
+[submodule ".vim/bundle/vim-pandoc-syntax"]
+	path = .vim/bundle/vim-pandoc-syntax
+	url = https://github.com/vim-pandoc/vim-pandoc-syntax
+[submodule ".vim/bundle/vim-paste-easy"]
+	path = .vim/bundle/vim-paste-easy
+	url = https://github.com/roxma/vim-paste-easy
+[submodule ".vim/bundle/vim-pathogen"]
+	path = .vim/bundle/vim-pathogen
+	url = https://github.com/tpope/vim-pathogen
+[submodule ".vim/bundle/vimproc.vim"]
+	path = .vim/bundle/vimproc.vim
+	url = https://github.com/Shougo/vimproc.vim.git
+[submodule ".vim/bundle/vim-ragtag"]
+	path = .vim/bundle/vim-ragtag
+	url = https://github.com/tpope/vim-ragtag
+[submodule ".vim/bundle/vim-repeat"]
+	path = .vim/bundle/vim-repeat
+	url = git://github.com/tpope/vim-repeat.git
+[submodule ".vim/bundle/vim-scriptease"]
+	path = .vim/bundle/vim-scriptease
+	url = git://github.com/tpope/vim-scriptease.git
+[submodule ".vim/bundle/vim-sensible"]
+	path = .vim/bundle/vim-sensible
+	url = git://github.com/tpope/vim-sensible.git
+[submodule ".vim/bundle/vim-slash"]
+	path = .vim/bundle/vim-slash
+	url = https://github.com/junegunn/vim-slash
+[submodule ".vim/bundle/vim-sneak"]
+	path = .vim/bundle/vim-sneak
+	url = https://github.com/justinmk/vim-sneak
+[submodule ".vim/bundle/vim-snippets"]
+	path = .vim/bundle/vim-snippets
+	url = https://github.com/honza/vim-snippets.git
+[submodule ".vim/bundle/vim-speak"]
+	path = .vim/bundle/vim-speak
+	url = https://github.com/rafaeln/vim-speak.git
+[submodule ".vim/bundle/vim-speeddating"]
+	path = .vim/bundle/vim-speeddating
+	url = https://github.com/tpope/vim-speeddating
+[submodule ".vim/bundle/vim-surround"]
+	path = .vim/bundle/vim-surround
+	url = git://github.com/tpope/vim-surround.git
+[submodule ".vim/bundle/vim-table-mode"]
+	path = .vim/bundle/vim-table-mode
+	url = https://github.com/dhruvasagar/vim-table-mode/
+[submodule ".vim/bundle/vimtex"]
+	path = .vim/bundle/vimtex
+	url = https://github.com/lervag/vimtex
+[submodule ".vim/bundle/vim-textobj-indent"]
+	path = .vim/bundle/vim-textobj-indent
+	url = https://github.com/kana/vim-textobj-indent
+[submodule ".vim/bundle/vim-textobj-latex"]
+	path = .vim/bundle/vim-textobj-latex
+	url = git://github.com/rbonvall/vim-textobj-latex
+[submodule ".vim/bundle/vim-textobj-quote"]
+	path = .vim/bundle/vim-textobj-quote
+	url = https://github.com/reedes/vim-textobj-quote
+[submodule ".vim/bundle/vim-textobj-user"]
+	path = .vim/bundle/vim-textobj-user
+	url = git://github.com/kana/vim-textobj-user
+[submodule ".vim/bundle/vim-tmux-focus-events"]
+	path = .vim/bundle/vim-tmux-focus-events
+	url = https://github.com/tmux-plugins/vim-tmux-focus-events
+[submodule ".vim/bundle/vim-tmux-navigator"]
+	path = .vim/bundle/vim-tmux-navigator
+	url = https://github.com/christoomey/vim-tmux-navigator
+[submodule ".vim/bundle/vim-unimpaired"]
+	path = .vim/bundle/vim-unimpaired
+	url = git://github.com/tpope/vim-unimpaired.git
+[submodule ".vim/bundle/vim-vinegar"]
+	path = .vim/bundle/vim-vinegar
+	url = git://github.com/tpope/vim-vinegar.git
+[submodule ".vim/bundle/vim-visual-star-search"]
+	path = .vim/bundle/vim-visual-star-search
+	url = https://github.com/nelstrom/vim-visual-star-search
+[submodule ".vim/bundle/vim-yankstack"]
+	path = .vim/bundle/vim-yankstack
+	url = https://github.com/maxbrunsfeld/vim-yankstack
+[submodule ".vim/bundle/Zenburn"]
+	path = .vim/bundle/Zenburn
+	url = https://github.com/jnurmine/Zenburn
