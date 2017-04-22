@@ -1,0 +1,36 @@
+## My personal zathura
+
+## Settings
+set adjust-open         width
+set window-width        1500
+set window-height       1000
+set scroll-full-overlap 0.05
+set selection-clipboard clipboard
+
+## Inverted mode
+set recolor-keephue
+set recolor-darkcolor  "#DCDCCC"
+set recolor-lightcolor "#1F1F1F"
+
+## Alternative color settings
+
+# set recolor-darkcolor  "#E0E0E0" 
+# set recolor-lightcolor "#151515" 
+# set recolor-darkcolor  "#93A1A1"
+# set recolor-lightcolor "#002B36"
+
+## Mappings
+map [normal]     <BackSpace> scroll full-up
+map [fullscreen] <BackSpace> scroll full-up
+map [normal]     i           set recolor
+map [fullscreen] i           set recolor
+map [normal]     <C-m>       feedkeys ":bmark "
+map [fullscreen] <C-m>       feedkeys ":bmark "
+map [normal]     d           scroll half-down    ## this mapping overwrites d for
+map [fullscreen] d           scroll half-down    ## toggling dual page display
+map [normal]     D           toggle_page_mode
+map [fullscreen] D           toggle_page_mode
+map [normal]     u           scroll half-up
+map [fullscreen] u           scroll half-up
+map [normal]     =           zoom in
+map [fullscreen] =           zoom in
