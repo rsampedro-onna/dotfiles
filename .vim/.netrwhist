@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/home/rafael/dotfiles/.i3/i3blocks-contrib/monitor_manager'
+let g:netrw_dirhist_2='/home/rafael/dotfiles/.i3/i3blocks-contrib'
+let g:netrw_dirhist_3='/home/rafael/dotfiles/.i3/i3blocks-contrib/usb'

@@ -1,0 +1,30 @@
+snippet div "<div>" w
+<div>
+	${1:${VISUAL}}
+</div>
+$0
+endsnippet
+
+snippet div. "<div> with class" w
+<div`!p snip.rv=' class="' if t[1] else ""`${1:name}`!p snip.rv = '"' if t[1] else ""`>
+	${2:${VISUAL}}
+</div>
+$0
+endsnippet
+
+snippet a "Link" w
+<a href="${1:http://www.${2:url.com}}"${3: target="_blank"}>${4:${VISUAL:Anchor Text}}</a>
+endsnippet
+
+snippet p "paragraph" w
+<p>${1:${VISUAL}}</p>
+$0
+endsnippet
+
+snippet em "emphasis" w
+<em>${1:${VISUAL}}</em>$0
+endsnippet
+
+snippet < "generic tag" i
+<${1:${VISUAL}}>${2}</$1>${0}
+endsnippet

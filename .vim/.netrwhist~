@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/rafael/Dropbox/linguistica/bororo'
+let g:netrw_dirhist_2='/home/rafael/Dropbox/linguistica'
+let g:netrw_dirhist_3='/home/rafael/Dropbox/linguistica/bororo'
+let g:netrw_dirhist_4='/home/rafael/Dropbox/linguistica/bororo/BO-gravacoes'
+let g:netrw_dirhist_5='/home/rafael/Dropbox/linguistica/bororo/BO-gravacoes/BO-200412-RN-DB-pescaria'
+let g:netrw_dirhist_6='/home/rafael/Dropbox/linguistica/pos-doc/2014/WSCLA_2015/proceedings'
+let g:netrw_dirhist_7='/home/rafael/Dropbox/linguistica/pos-doc/2014/WSCLA_2015'
+let g:netrw_dirhist_8='/home/rafael/Dropbox/linguistica/pos-doc/2014/WSCLA_2015/proceedings'

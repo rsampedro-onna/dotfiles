@@ -1,0 +1,76 @@
+snippet phd "PhD thesis" b
+@phdthesis{${1:name},
+	author={${2:author}},
+	title={${3:title}},
+	school={${4:school}},
+	year={${5:YYYY}},
+	keywords={${6:keywords}},
+	annotation={${7:annotation}},
+}
+$0
+endsnippet
+
+snippet col "Collection" b
+@collection{${1:name},
+	title={${2:title}},
+	editor={${3:editor}},
+	year={${4:YYYY}},
+	publisher={${5:publisher}},
+	series={${6:series}},
+	annotation={${7:annotation}},
+}
+$0
+endsnippet
+
+snippet inc "In collection" b
+@incollection{${1:name},
+	title={${2:title}},
+	author={${3:author}},
+	booktitle={${4:booktitle}},
+	editor={${5:editor}},
+	year={${6:YYYY}},
+	publisher={${7:publisher}},
+	series={${8:series}},
+	pages={${9:XXX}--${9:YYY}},
+	annotation={${10:annotation}},
+}
+$0
+endsnippet
+
+snippet inp "In proceedings" b
+@inproceedings{${1:name},
+	author={${2:title}},
+	title={${3:title}},
+	year={${4:YYYY}},
+	booktitle={${5:booktitle}},
+	volume={${6:volume}},
+	annotation={${7:annotation}},
+}
+$0
+endsnippet
+
+snippet unpublished "Unpublished manuscript" b
+@unpublished{${1:name},
+	author={${2:author}},
+	title={${3:title}},
+	date={${4:date}},
+	url={${5:url}},
+	keywords={${6:keywords}},
+	annotation={${7:annotation}},
+}
+$0
+endsnippet
+
+snippet misc "Miscelaneous" b
+@unpublished{${1:name},
+	author={${2:author}},
+	title={${3:title}},
+	year={${4:year}},
+	howpublished={${5:howpublished}},
+	note={${6:note}},
+	url={${7:url}},
+	keywords={${8:keywords}},
+	annotation={${9:annotation}},
+}
+$0
+endsnippet
