@@ -249,4 +249,4 @@ exec --no-startup-id /usr/lib/gnome-settings-daemon/gnome-settings-daemon
 exec urxvttmux.sh
 
 # application shortcuts
-bindsym $mod+c exec google-chrome
+bindsym $mod+c exec google-chrome-stable
