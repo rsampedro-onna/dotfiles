@@ -1,0 +1,25 @@
+scriptencoding utf-8
+set encoding=utf-8
+
+filetype plugin on
+
+" Pathogen initialization {{{2
+
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+
+" Disables all plugins
+let g:pathogen_disabled = []
+for plugin in glob('~/.vim/bundle/*', 0, 1)
+  call add(g:pathogen_disabled, substitute(plugin, '.*/', '', ''))
+endfor
+
+" Now enables just some
+let g:pathogen_enabled = []
+for plugin in []
+  call add(g:pathogen_enabled,remove(g:pathogen_disabled, index(g:pathogen_disabled, plugin)))
+endfor
+
+execute pathogen#infect()
+
+" Any settings relevant for the testing
+se cpo+=y
