@@ -157,6 +157,7 @@ bindsym $mod+Shift+0 move container to workspace $workspace10
 assign [class="Google-chrome"] $workspace2
 for_window [class="Insync"] floating enable border pixel 1
 for_window [title="Unlock private key"] floating enable border pixel 1
+for_window [class="xwrits"] floating enable border pixel 1
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -199,10 +200,13 @@ bindsym $mod+r mode "resize"
 
 mode "vim" {
 
-  bindsym --release h exec xdotool key Left
-  bindsym --release l exec xdotool key Right
-  bindsym --release j exec xdotool key Down
-  bindsym --release k exec xdotool key Up
+  bindsym --release h exec xdotool key Left  Left
+  bindsym --release l exec xdotool key Right Right
+  bindsym --release j exec xdotool key Down  Down
+  bindsym --release k exec xdotool key Up    Up
+
+  bindsym --release f exec xdotool key Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down
+  bindsym --release b exec xdotool key Up   Up   Up   Up   Up   Up   Up   Up   Up   Up   Up   Up   Up   Up   Up   Up   Up   Up   Up   Up   Up   Up   Up   Up   Up   Up   Up   Up   Up   Up   Up   Up   Up   Up   Up   Up   Up   Up   Up   Up   Up
 
   # back to normal: Escape
   bindsym Escape mode "default"
