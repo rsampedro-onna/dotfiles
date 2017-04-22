@@ -234,3 +234,6 @@
 [submodule ".vim/bundle/Zenburn"]
 	path = .vim/bundle/Zenburn
 	url = https://github.com/jnurmine/Zenburn
+[submodule ".i3/i3-hud-menu"]
+	path = .i3/i3-hud-menu
+	url = https://github.com/RafaelBocquet/i3-hud-menu
