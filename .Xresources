@@ -129,6 +129,7 @@ URxvt*geometry:        140x40
 ! URxvt.font:            xft:FiraMono:pixelsize=23
 ! URxvt.font:            xft:DroidSansMonoSlashed:pixelsize=24
 URxvt.font:            xft:Hack:pixelsize=21,\
+                       xft:fontsawesome-webfont,\
                        xft:SourceCodePro,\
                        xft:DejaVuSansMono,\
                        xft:Symbola,\
