@@ -1,0 +1,101 @@
+" digraphs for some common IPA characters
+
+dig aa   592  " inverted a                  ɐ
+dig bb   595  " implosive bilabial          ɓ
+dig bf   946  " vd bilabial fricative       β
+dig dd   599  " implosive alveolar          ɗ
+dig dd   598  " retroflex d                 ɖ
+dig dz   676  " post-alveolar affricate     ʤ
+dig ee   603  " epsilon                     ɛ
+dig 33   604  " open-mid central            ɜ
+dig 66   600  " closed-mid central          ɘ
+dig GG   611  " velar fricative             ɣ
+dig gg   609  " IPA-styled g                ɡ 
+dig hh   688  " aspirated                   ʰ
+dig ii   616  " barred i                    ɨ
+dig i.   305  " dotless i                   ı
+dig ie   618  " small caps i                ɪ
+dig io   953  " iota                        ι
+dig zz   658  " postalveolal fricative      ʒ
+dig ll   620  " vls alveolar lat fricative  ɬ
+dig lh   654  " palatal lateral approximant ʎ
+dig nh   626  " palatal nasal               ɲ
+dig nr   627  " retroflex nasal             ɳ
+dig nl   414  " long-tailed n               ƞ
+dig ng   331  " velar nasal                 ŋ
+dig oo   596  " inverted c                  ɔ
+dig vo   652  " unrounded ɔ                 ʌ
+dig go   612  " unrounded o                 ɤ                 
+dig rr   638  " tap                         ɾ
+dig RR   633  " postalveolar approximant    ɹ
+dig rR   637  " retroflex flap              ɽ
+dig ss   643  " postalveolar fricative      ʃ
+dig ??   660  " glottal stop                ʔ
+dig ?\   704  " glottalized                 ˀ
+dig TS   679  " post-alveolar affricate     ʧ
+dig u-   649  " high central rounded        ʉ
+dig wu   623  " unrounded back high vowel   ɯ
+dig ww   695  " labialized                  ʷ
+dig vv   651  " labiodental approximant     ʋ
+dig uo   650  " lax u                       ʊ
+dig \|\| 712  " primary stress mark         ˈ
+dig ,,   716  " secondary stress mark       ˌ
+dig ::   720  " length mark                 ː
+dig ~~   771  " combining nasalized          ̃
+dig ''   769  " combining high tone          ́
+dig ``   768  " combining low tone           
+dig ^^   770  " combining circumflex         ̂
+dig --   865  " tie bar above                ͡
+dig __   860  " tie bar below                ͜
+dig va   778  " voiceless above              ̊
+dig -~   816  " creaky-voiced                ̰
+dig ov   805  " voiceless                    ̥ 
+dig uu   815  " breve under                  ̯
+dig vb   812  " caron below (stiff-voiced)   ̬
+dig -.   821  " short bar overlay            ̵
+
+
+" digraphs for superscripts and subscripts
+" superscripts
+" ᵃ ᵇ ᶜ ᵈ ᵉ ᶠ ᵍ ʰ ⁱ ʲ ᵏ ˡ ᵐ ⁿ ᵒ ᵖ ʳ ˢ ᵗ ᵘ ᵛ ʷ ˣ ʸ ᶻ
+dig aS 7491
+dig bS 7495
+dig cS 7580
+dig dS 7496
+dig eS 7497
+dig fS 7584
+dig gS 7501
+dig hS 688
+dig iS 8305
+dig jS 690
+dig kS 7503
+dig lS 737
+dig mS 7504
+dig nS 8319
+dig oS 7506
+dig pS 7510
+dig rS 691
+dig sS 738
+dig tS 7511
+dig uS 7512
+dig vS 7515
+dig wS 695
+dig xS 739
+dig yS 696
+dig zS 7611
+
+" big case superscript (not implemented yet)
+" ᴬ ᴮ ᴰ ᴱ ᴳ ᴴ ᴵ ᴶ ᴷ ᴸ ᴹ ᴺ ᴼ ᴾ ᴿ ᵀ ᵁ ⱽ ᵂ
+
+" subscripts
+" ₐ ₑ ₕ ᵢ ⱼ ₖ ₗ ₘ ₙ ₒ ₚ ᵣ ₛ ₜ ᵤ ᵥ ₓ
+dig as 8336
+dig es 8337
+dig is 7522
+dig js 11388
+dig ms 8344
+
+" maths
+" ⟦ ⟧ 
+dig [[ 10214
+dig ]] 10215

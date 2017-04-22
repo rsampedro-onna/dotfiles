@@ -660,7 +660,7 @@ cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 
 " loads my digraphs
-so ~/.vimdig
+so $HOME/.vim/vimdigraphs
 
 nnoremap Q @@
 vnoremap Q @@
