@@ -65,6 +65,10 @@ bindsym $mod+Escape exec --no-startup-id i3-dmenu-desktop --dmenu="/usr/local/bi
 # for the line above to work I had to compile the latest version of dmenu
 bindsym $mod+d exec rofi -show run -lines 5 -eh 2 -width 80 -padding 100 -opacity "80" -bw 0 -bc "$base01" -bg "$base02" -fg "$base07" -hlbg "$base05" -columns 2 -font "System San Francisco Display 18" -hlfg "#9575cd"
 
+# the hud-alike
+exec ~/.i3/i3-appmenu-service.py
+bindsym $mod+x exec ~/.i3/i3-hud-menu/i3-hud-menu.py
+
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -252,3 +256,4 @@ exec urxvttmux.sh
 
 # application shortcuts
 bindsym $mod+c exec google-chrome-stable
+bindsym $mod+n exec ~/bin/n2utilus.sh
