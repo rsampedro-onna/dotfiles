@@ -231,7 +231,7 @@ bindsym XF86AudioPrev  exec playerctl previous
 
 # keyboard layout
 exec setxkbmap -layout br -variant dvorak-altdeadkeys -option terminate:ctrl_alt_bksp -option caps:swapescape -option ctrl:swap_lalt_lctl -option ctrl:menu_rctrl -option ctrl:rctl_menu -option altwin:prsc_rwin -option lv3:ralt_alt -option lv3:space_switch
-exec "xcape -t 150 -e 'ISO_Level3_Shift=space;Control_L=apostrophe;Shift_L=Shift_L|bracketleft;Shift_R=Shift_R|bracketright'"
+exec xcape.sh
 
 # mouse settings
 exec xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Tapping Enabled' 1
