@@ -1,0 +1,18 @@
+set editing-mode vi
+
+$if mode=vi
+
+  set keymap vi-command
+  "\C-p": history-search-backward
+  "\C-n": history-search-forward
+  "gg":   beginning-of-history
+  "G":    end-of-history
+
+  set keymap vi-insert
+  "\C-p": history-search-backward
+  "\C-n": history-search-forward
+  "\C-w": unix-filename-rubout
+#  "jj":   vi-movement-mode
+
+$endif
+
