@@ -98,7 +98,7 @@ bindsym $mod+Shift+Right move right
 bindsym $mod+slash split h
 
 # split in vertical orientation
-bindsym $mod+v split v
+bindsym $mod+minus split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen
@@ -196,6 +196,19 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
+
+mode "vim" {
+
+  bindsym --release h exec xdotool key Left
+  bindsym --release l exec xdotool key Right
+  bindsym --release j exec xdotool key Down
+  bindsym --release k exec xdotool key Up
+
+  # back to normal: Escape
+  bindsym Escape mode "default"
+}
+
+bindsym $mod+v mode "vim"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
