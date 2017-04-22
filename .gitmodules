@@ -80,6 +80,7 @@
 [submodule ".vim/bundle/tmux-complete.vim"]
 	path = .vim/bundle/tmux-complete.vim
 	url = https://github.com/wellle/tmux-complete.vim
+  ignore = dirty
 [submodule ".vim/bundle/ultisnips"]
 	path = .vim/bundle/ultisnips
 	url = https://github.com/SirVer/ultisnips
