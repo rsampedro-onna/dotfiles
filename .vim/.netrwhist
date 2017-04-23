@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/home/rafael/dotfiles/.i3'
 let g:netrw_dirhist_2='/home/rafael/rafaeln@gmail.com/bin'
 let g:netrw_dirhist_3='/home/rafael/dotfiles/.i3'
+let g:netrw_dirhist_4='/home/rafael/dotfiles/.i3/i3-hud-menu'
+let g:netrw_dirhist_5='/home/rafael/dotfiles/.i3'
+let g:netrw_dirhist_6='/usr/share/i3blocks'
