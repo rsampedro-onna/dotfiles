@@ -341,3 +341,4 @@ exec urxvttmux.sh
 # application shortcuts
 bindsym $mod+c exec google-chrome-stable
 bindsym $mod+n exec ~/bin/n2utilus.sh
+bindsym $mod+v exec ~/.vim-anywhere/bin/run
