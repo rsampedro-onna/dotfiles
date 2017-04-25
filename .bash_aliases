@@ -209,7 +209,7 @@ alias cd-='cd -'
 
 function ranger-cd {
     tempfile="$(mktemp -t tmp.XXXXXX)"
-    /usr/local/bin/ranger --choosedir="$tempfile" "${@:-$(pwd)}"
+    EDITOR=nvim /usr/local/bin/ranger --choosedir="$tempfile" "${@:-$(pwd)}"
     test -f "$tempfile" &&
     if [ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]; then
         command cd -- "$(cat "$tempfile")"
