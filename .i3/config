@@ -189,13 +189,13 @@ bindsym $mod+Shift+r restart
 # )))
 
 # exit mode (((
-set $exit_mode System (l)ock, l(o)gout, (s)uspend, or (S)hutdown
+set $exit_mode System (l)ock, l(o)gout, (s)uspend, or (e)xit
 
 mode "$exit_mode" {
   bindsym l exec i3lock -c 1f222d, mode "default"
   bindsym o exec ~/.i3/exit_menu.sh, mode "default"
   bindsym s exec i3lock -c 1f222d, exec systemctl suspend, mode "default"
-  bindsym Shift+s exec ~/.i3/shutdown_menu.sh, mode "default"
+  bindsym e exec ~/.i3/shutdown_menu.sh, mode "default"
 
   bindsym Escape mode "default"
   bindsym Return mode "default"
@@ -326,7 +326,7 @@ exec xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Natural Scrolling En
 exec xbacklight -set 10
 
 # applications to autostart (((
-exec_always compton -f
+exec_always compton -b -f --backend glx --vsync opengl-swc
 exec --no-startup-id dropbox start
 exec --no-startup-id insync start
 exec --no-startup-id nm-applet
