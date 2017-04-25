@@ -7,7 +7,7 @@ export n=~/Dropbox/Notas
 #}}}
 # Simple aliases {{{
 
-alias g='grep'
+alias g='git'
 alias n='v ~/Dropbox/Notas/'
 alias rm='trash-put'
 alias cd..='cd ..'
