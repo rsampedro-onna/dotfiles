@@ -274,7 +274,6 @@ bindsym $mod+space mode "vim"
 # }
 
 bar {
-  # status_command i3status
   status_command i3blocks -c ~/.i3/i3blocks.conf
   font pango: System San Francisco Display, FontAwesome 12
   position bottom
