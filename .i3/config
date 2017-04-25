@@ -229,12 +229,13 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 # )))
 
-# vim modes (((
+# vim mode (((
 mode "vim-delete" {
   bindsym --release w exec xdotool key Control+Delete; mode "vim"
   bindsym --release 4 exec xdotool key Control+Shift+Delete; mode "vim"
   bindsym --release b exec xdotool key Control+BackSpace; mode "vim"
   bindsym --release 0 exec xdotool key Control+Shift+BackSpace; mode "vim"
+  bindsym --release d exec xdotool key Home Control+Shift+Delete; mode "vim"
 }
 mode "vim" {
   # arrow-key equivalents
@@ -254,13 +255,13 @@ mode "vim" {
   # longer movement (41 keypresses)
   set $down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down
   set $up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up
-  bindsym --release f exec xdotool key $down
+  bindsym --release e exec xdotool key $down
   bindsym --release u exec xdotool key $up
   # back to normal: Enter or Escape
   bindsym Return mode "default"
   bindsym Escape mode "default"
   # submodes
-  bindsym d mode "vim-delete"
+  bindsym --release d mode "vim-delete"
 }
 bindsym $mod+space mode "vim"
 #)))
