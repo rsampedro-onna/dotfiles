@@ -189,13 +189,13 @@ bindsym $mod+Shift+r restart
 # )))
 
 # exit mode (((
-set $exit_mode System (l)ock, l(o)gout, (s)uspend, or (e)xit
+set $exit_mode System (l)ock, l(o)gout, (s)uspend, or s(h)utdown
 
 mode "$exit_mode" {
   bindsym l exec i3lock -c 1f222d, mode "default"
   bindsym o exec ~/.i3/exit_menu.sh, mode "default"
   bindsym s exec i3lock -c 1f222d, exec systemctl suspend, mode "default"
-  bindsym e exec ~/.i3/shutdown_menu.sh, mode "default"
+  bindsym h exec ~/.i3/shutdown_menu.sh, mode "default"
 
   bindsym Escape mode "default"
   bindsym Return mode "default"
@@ -315,7 +315,7 @@ bindsym XF86AudioPrev  exec playerctl previous
 # keyboard and mouse settings (((
 # keyboard layout
 exec setxkbmap -layout br -variant dvorak-altdeadkeys -option terminate:ctrl_alt_bksp -option caps:swapescape -option ctrl:swap_lalt_lctl -option ctrl:menu_rctrl -option ctrl:rctl_menu -option altwin:prsc_rwin -option lv3:ralt_alt -option lv3:space_switch
-exec --no-startup-id xcape.sh
+exec --no-startup-id "sleep 1; xcape.sh"
 
 # mouse settings
 exec xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Tapping Enabled' 1
