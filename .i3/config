@@ -99,6 +99,9 @@ workspace $workspace8 output HDMI1
 workspace $workspace9 output eDP1
 workspace $workspace10 output HDMI1
 
+# for renaming windows
+bindsym $mod+b exec i3-input -F 'rename workspace to "%s"' -f 'pango:System San Francisco Display-12'
+
 assign [class="Google-chrome"] $workspace2
 assign [title="PDF-XChange"] $workspace3
 #)))
