@@ -326,11 +326,12 @@ exec xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Natural Scrolling En
 exec xbacklight -set 10
 
 # applications to autostart (((
-exec_always compton -b -f --backend glx --vsync opengl-swc
+exec /usr/lib/gnome-settings-daemon/gnome-settings-daemon
+exec_always --no-startup-id compton -b -f --backend glx --vsync opengl-swc
+exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpaper-metal.jpg
 exec --no-startup-id dropbox start
 exec --no-startup-id insync start
 exec --no-startup-id nm-applet
-exec --no-startup-id /usr/lib/gnome-settings-daemon/gnome-settings-daemon
 exec --no-startup-id redshift
 exec --no-startup-id diodon
 exec xwrits typetime=30 breaktime=3 +breakclock after=5 +multiply

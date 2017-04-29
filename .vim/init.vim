@@ -643,8 +643,8 @@ inoremap <silent> <c-s> <c-o>:if expand("%") == ""<CR>browse confirm w<CR>else<C
 " vnoremap <C-C> "+y
 " nnoremap <silent> csc :call setreg('+',getreg('"'))<CR>
 
-" open pdf with PDF-Viewer
-nnoremap <silent> g<c-x> :silent !gtk-launch PDF-Viewer.desktop <cfile> &> /dev/null <cr> :redraw! <cr>
+" open pdf with PDF-Edit
+nnoremap <silent> g<c-x> :silent !gtk-launch PDF-XChange-Editor.desktop <cfile> &> /dev/null <cr> :redraw! <cr>
 
 " why go to to the marked line without going to the marked column as well?
 nnoremap ' `
