@@ -108,7 +108,7 @@ assign [title="PDF-XChange"] $workspace3
 
 for_window [class="Insync"] floating enable border pixel 1
 for_window [title="Unlock private key"] floating enable border pixel 1
-for_window [class="XWrits"] floating enable border pixel 1
+for_window [class="XWrits"] floating
 for_window [class="Nautilus" instance="file_progress"] floating enable
 
 # Keybindings (((
