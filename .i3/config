@@ -338,7 +338,7 @@ exec --no-startup-id redshift
 exec --no-startup-id diodon
 exec xwrits typetime=30 breaktime=3 +breakclock after=5 +multiply
 exec urxvttmux.sh
-exec_always feh --bg-fill ~/Pictures/wallpaper-poly.jpg
+exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper-poly.jpg
 #)))
 
 # application shortcuts
