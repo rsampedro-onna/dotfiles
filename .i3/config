@@ -239,10 +239,12 @@ bindsym $mod+r mode "resize"
 # vim mode (((
 mode "vim-delete" {
   bindsym --release w exec xdotool key Control+Delete; mode "vim"
-  bindsym --release 4 exec xdotool key Control+Shift+Delete; mode "vim"
+  bindsym --release ";" exec xdotool key Control+Shift+Delete; mode "vim"
   bindsym --release b exec xdotool key Control+BackSpace; mode "vim"
-  bindsym --release 0 exec xdotool key Control+Shift+BackSpace; mode "vim"
+  bindsym --release "," exec xdotool key Control+Shift+BackSpace; mode "vim"
   bindsym --release d exec xdotool key Home Control+Shift+Delete; mode "vim"
+  bindsym Return mode "vim"
+  bindsym Escape mode "vim"
 }
 mode "vim" {
   # arrow-key equivalents
@@ -254,8 +256,8 @@ mode "vim" {
   bindsym --release w exec xdotool key --clearmodifiers Ctrl+Right
   bindsym --release b exec xdotool key --clearmodifiers Ctrl+Left
   # line movement
-  bindsym --release 4 exec xdotool key --clearmodifiers End
-  bindsym --release 0 exec xdotool key --clearmodifiers Home
+  bindsym --release ";" exec xdotool key --clearmodifiers End
+  bindsym --release "," exec xdotool key --clearmodifiers Home
   # manipulate text
   bindsym --release x exec xdotool key Delete
   bindsym --release Shift+x exec xdotool key BackSpace
