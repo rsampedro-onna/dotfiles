@@ -53,6 +53,9 @@ hide_edge_borders both
 #)))
 
 # Workspaces (((
+
+workspace_layout tabbed
+
 set $workspace1 "1: Terminal "
 set $workspace2 "2: Chrome "
 set $workspace3 "3: PDF-XChange "
@@ -100,7 +103,7 @@ workspace $workspace9 output eDP1
 workspace $workspace10 output HDMI1
 
 # for renaming windows
-bindsym $mod+b exec i3-input -F 'rename workspace to "%s"' -f 'pango:System San Francisco Display-12'
+bindsym $mod+b exec i3-input -P "Rename to : " -F 'rename workspace to "%s"' -f 'pango:System San Francisco Display-12'
 
 assign [class="Google-chrome"] $workspace2
 assign [title="PDF-XChange"] $workspace3
