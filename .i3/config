@@ -107,6 +107,7 @@ bindsym $mod+b exec i3-input -P "Rename to : " -F 'rename workspace to "%s"' -f 
 
 assign [class="Google-chrome"] $workspace2
 assign [title="PDF-XChange"] $workspace3
+assign [class="Rhythmdox"] $workspace10
 #)))
 
 for_window [class="Insync"] floating enable border pixel 1
