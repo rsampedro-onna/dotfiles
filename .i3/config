@@ -352,3 +352,4 @@ exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper-poly.jpg
 bindsym $mod+c exec google-chrome-stable
 bindsym $mod+n exec ~/bin/n2utilus.sh
 bindsym $mod+v exec ~/.vim-anywhere/bin/run
+bindsym --release $mod+p exec gnome-screenshot --interactive
