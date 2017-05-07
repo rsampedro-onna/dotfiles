@@ -336,7 +336,7 @@ exec xbacklight -set 10
 
 # applications to autostart (((
 exec /usr/lib/gnome-settings-daemon/gnome-settings-daemon
-# exec_always --no-startup-id compton -b -f --backend glx --vsync opengl
+exec_always --no-startup-id compton -b -f --backend glx --vsync opengl
 exec --no-startup-id dropbox start
 exec --no-startup-id insync start
 exec --no-startup-id nm-applet
