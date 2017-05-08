@@ -323,8 +323,20 @@ bindsym XF86AudioPrev  exec playerctl previous
 
 # keyboard and mouse settings (((
 # keyboard layout
-exec setxkbmap -layout br -variant dvorak-altdeadkeys -option terminate:ctrl_alt_bksp -option caps:swapescape -option ctrl:swap_lalt_lctl -option ctrl:menu_rctrl -option ctrl:rctl_menu -option altwin:prsc_rwin -option lv3:ralt_alt -option lv3:space_switch
-exec --no-startup-id "sleep 1; xcape.sh"
+exec setxkbmap -layout br -variant dvorak-altdeadkeys 
+exec setxkbmap -option terminate:ctrl_alt_bksp \
+               -option caps:swapescape \
+               -option ctrl:swap_lalt_lctl \
+               -option ctrl:menu_rctrl \
+               -option ctrl:rctl_menu \
+               -option altwin:prsc_rwin \
+               -option lv3:ralt_alt \
+               -option lv3:space_switch
+exec --no-startup-id "sleep 1 ; xcape.sh"
+bindsym $mod+Tab --release exec "if setxkbmap -query | grep --silent dvorak ;              \
+                                   then setxkbmap -layout us -variant intl ;               \
+                                   else setxkbmap -layout br -variant dvorak-altdeadkeys ; \
+                                 fi"
 
 # mouse settings
 exec xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Tapping Enabled' 1
