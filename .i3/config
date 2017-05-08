@@ -357,7 +357,7 @@ exec --no-startup-id diodon
 exec --no-startup-id ~/.i3/i3-hud-menu/i3-appmenu-service.py
 exec xwrits typetime=30 breaktime=3 +breakclock after=5 +multiply
 exec urxvttmux.sh
-exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper-poly.jpg
+exec_always --no-startup-id "sleep 1 ; feh --bg-fill ~/Pictures/wallpaper-poly.jpg"
 #)))
 
 # application shortcuts
