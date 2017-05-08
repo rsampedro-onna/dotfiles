@@ -52,7 +52,7 @@ client.urgent           $base02 $base08    $base00 $base0F
 hide_edge_borders both
 #)))
 
-# Workspaces (((
+# workspaces (((
 
 workspace_layout tabbed
 
@@ -115,7 +115,9 @@ for_window [title="Unlock private key"] floating enable border pixel 1
 for_window [class="XWrits"] floating
 for_window [class="Nautilus" instance="file_progress"] floating enable
 
-# Keybindings (((
+popup_during_fullscreen leave_fullscreen
+
+# keybindings (((
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -210,6 +212,7 @@ mode "$exit_mode" {
 bindsym $mod+q mode "$exit_mode"
 
 # )))
+
 # resize window (you can also use the mouse for that) (((
 mode "resize" {
   # These bindings trigger as soon as you enter the resize mode
