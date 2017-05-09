@@ -135,7 +135,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+Escape exec --no-startup-id j4-dmenu-desktop --dmenu="/usr/local/bin/dmenu -i -fn 'System San Francisco Display-12'"
 # for the line above to work I had to compile the latest version of dmenu
 # bindsym $mod+d exec rofi -show run -lines 5 -eh 2 -width 80 -padding 100 -opacity "80" -bw 0 -bc "$base01" -bg "$base02" -fg "$base07" -hlbg "$base05" -columns 2 -font "System San Francisco Display 18" -hlfg "#9575cd"
-bindsym $mod+d exec --no-startup-id /usr/local/bin/dmenu_run -i -fn 'System San Francisco Display-12'
+bindsym $mod+Tab exec --no-startup-id /usr/local/bin/dmenu_run -i -fn 'System San Francisco Display-12'
 
 # the hud-alike
 exec ~/.i3/i3-appmenu-service.py
@@ -189,7 +189,7 @@ bindsym $mod+t focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+bindsym $mod+d focus child
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
