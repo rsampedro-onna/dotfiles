@@ -291,8 +291,6 @@ bar {
   position bottom
   tray_output primary
   # strip_workspace_numbers yes
-  bindsym button4 nop
-  bindsym button5 nop
   colors {
     separator  $base03
     background $base01
