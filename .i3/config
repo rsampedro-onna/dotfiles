@@ -334,10 +334,6 @@ exec setxkbmap -option terminate:ctrl_alt_bksp \
                -option lv3:ralt_alt \
                -option lv3:space_switch
 exec --no-startup-id "sleep 1 ; xcape.sh"
-bindsym $mod+Tab --release exec "if setxkbmap -query | grep --silent dvorak ;              \
-                                   then setxkbmap -layout us -variant intl ;               \
-                                   else setxkbmap -layout br -variant dvorak-altdeadkeys ; \
-                                 fi"
 
 # mouse settings
 exec xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Tapping Enabled' 1
