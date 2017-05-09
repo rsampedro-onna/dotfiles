@@ -349,7 +349,7 @@ exec xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Natural Scrolling En
 # default brightness
 exec xbacklight -set 10
 
-# applications to autostart (((
+# autostarted applications (((
 exec /usr/lib/gnome-settings-daemon/gnome-settings-daemon
 exec_always --no-startup-id compton -b -f --backend glx --vsync opengl
 exec --no-startup-id dropbox start
