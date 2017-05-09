@@ -237,9 +237,3 @@
 [submodule ".i3/i3-hud-menu"]
 	path = .i3/i3-hud-menu
 	url = https://github.com/jamcnaughton/i3-hud-menu
-[submodule ".i3/i3blocks"]
-	path = .i3/i3blocks
-	url = https://github.com/Anachron/i3blocks
-[submodule ".i3/i3blocks-contrib"]
-	path = .i3/i3blocks-contrib
-	url = https://github.com/vivien/i3blocks-contrib
