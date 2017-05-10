@@ -1,0 +1,105 @@
+set rfc2047_parameters # sem isso o nome dos anexos ficam "=?utf-8..."
+
+hdr_order Date From To Cc
+alternative_order text/plain text/enriched text/html *
+auto_view text/html
+
+# Keyboard bindings
+# 
+# alias   - alias menu displaying suggested aliases
+# browser - file/directory browser
+# editor  - single line editor for `To:', `Subject:' prompts.
+# index   - the main menu showing messages in a folder
+# pager   - where the contents of the message are displayed
+# query   - menu displaying results of query command
+
+bind editor <Tab> complete-query
+bind editor ^T complete
+bind editor <space> noop
+bind compose p postpone-message
+
+bind index,pager c mail # Compose
+bind index,pager s flag-message # Star a message
+bind index,pager N search-opposite # by default unset
+bind index,pager a group-reply # Reply all
+bind index,pager d noop # I don't want no accidental deletion
+bind index,pager <Tab> next-unread
+bind index,pager <Esc><Tab> previous-unread
+bind index,pager \Cf next-page
+bind index,pager \Cb previous-page
+bind index z current-middle
+bind index Z noop
+
+bind index { previous-thread
+bind pager { half-up
+bind index } next-thread
+bind pager } half-down
+
+bind alias,index,pager,browser,query \Cd half-down
+bind alias,index,pager,browser,query \Cu half-up
+
+bind alias,index,browser,query G last-entry
+bind pager G bottom
+bind alias,index,browser,query gg first-entry
+bind pager gg top
+
+macro index,pager U          <set-flag>O     "Mark as unread"
+macro index,pager I          <clear-flag>O   "Mark as read"
+
+# Index View Options
+set index_format="%4C %Z %[!%b %d %Y] %-20.20F %s %*  %M "
+
+bind index <Space>      collapse-thread # Toggle threads closed and open
+bind index <Esc><Space> collapse-all
+bind index p            recall-message
+bind index F            change-folder
+
+# Limit messages quickly using ' + key.
+macro index \'\' "<limit>~A<enter>"       "reset all limits"
+macro index \'n  "<limit>~N|~O<enter>"    "limit to new messages"
+macro index \'s  "<limit>~F<enter>"       "limit to flagged messages"
+macro index \'u  "<limit>!~Q<enter>"      "limit to unreplied messages"
+macro index \'d  "<limit>~D<enter>"       "limit to deleted messages"
+macro index \'l  "<limit>~=<enter>"       "limit to duplicate messages"
+macro index \'p  "<limit>~g|~G<enter>"    "limit to signed or encrypted messages"
+
+# Pager View Options 
+# set pager_index_lines = 10 # number of index lines to show
+# set pager_context = 3      # number of context lines to show
+set pager_stop             # don't go to next message automatically
+set menu_scroll            # scroll in menus
+set tilde                  # show tildes like in vim
+unset markers              # no ugly plus signs
+
+bind pager u           exit # like in Gmail, unlike default 'i'
+bind pager i           noop
+bind pager k           previous-line
+bind pager j           next-line
+bind pager <Backspace> previous-page
+
+# Call urlview with Ctrl + B.
+macro index,pager,attach,compose gx                                             \
+  "<enter-command>set my_pipe_decode=\$pipe_decode pipe_decode<Enter>           \
+  <pipe-message>urlview<Enter>                                                  \
+  <enter-command>set pipe_decode=\$my_pipe_decode; unset my_pipe_decode<Enter>" \
+  "call urlview to extract URLs out of a message"
+
+# Pipe message to pbcopy with Ctrl + Y.  pipe_decode will ensure that
+# unnecessary headers are removed and the message is processed.
+macro index,pager,attach,compose \cy                                            \
+  "<enter-command>set my_pipe_decode=\$pipe_decode pipe_decode<Enter>           \
+  <pipe-message>xsel -b<Enter>                                                  \
+  <enter-command>set pipe_decode=\$my_pipe_decode; unset my_pipe_decode<Enter>" \
+  "copy message to clipboard using mutt-xsel"
+
+# Statusline (in Tmux/Screen)
+set status_format = '-%r-Mutt: %f [Msgs:%?M?%M/?%m%?n? New:%n?%?o? Old:%o?%?d? Del:%d?%?F? Flag:%F?%?t? Tag:%t?%?p? Post:%p?%?b? Inc:%b?%?l? %l?]---(%s/%S)-%>-(%P)---'
+
+# Colorscheme
+source ~/.mutt/mutt-colors-solarized-dark-16.muttrc
+#source ~/.mutt/mutt-colors-molokai.muttrc
+#source ~/.mutt/zenburn.theme.rc
+#source ~/.mutt/monokai.colors
+
+# 'a' shows all messages again (supersedes default <alias> binding)
+macro index a "<limit>all\n" "show all messages (undo limit)"
