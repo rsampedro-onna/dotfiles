@@ -60,6 +60,39 @@ let g:pathogen_disabled += ['nvim-completion-manager']
 " github, but was discouraged by the fact that there are unanswered bug
 " reports from 2015.
 let g:pathogen_disabled += ['vim-yankstack']
+
+" copied from https://github.com/neovim/neovim/pull/6597
+if exists('+winhighlight')
+  let g:pathogen_disabled += ['vim-diminactive']
+  function! s:configure_winhighlights(...)
+    let winnr = a:0 ? a:1 : winnr()
+    let force = a:0 > 1 ? a:2 : 0
+    if !force
+      if a:0
+        let ft = getbufvar(winbufnr(winnr), '&filetype')
+        let bt = getbufvar(winbufnr(winnr), '&buftype')
+      else
+        let ft = &filetype
+        let bt = &buftype
+      endif
+      " Check white/blacklist.
+      if index(['dirvish'], ft) == -1
+            \ && (index(['nofile', 'nowrite', 'acwrite', 'quickfix', 'help'], bt) != -1
+            \     || index(['startify'], ft) != -1)
+        call setwinvar(winnr, '&winhighlight', 'Normal:MyNormalWin,NormalNC:MyNormalWin')
+        return
+      endif
+    endif
+    call setwinvar(winnr, '&winhighlight', 'Normal:MyNormalWin,NormalNC:MyInactiveWin')
+  endfunction
+  augroup inactive_win
+    au!
+    au ColorScheme * hi MyInactiveWin ctermbg=18 | hi link MyNormalWin Normal
+    au FileType,WinNew * call s:configure_winhighlights()
+    au FocusGained * hi link MyNormalWin Normal
+    au FocusLost * hi link MyNormalWin MyInactiveWin
+  augroup END
+endif
 "}}}3
 
 " to load the plugins in the 'bundles' folder
