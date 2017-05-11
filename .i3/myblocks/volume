@@ -1,7 +1,11 @@
 #!/bin/bash
 
 DEFAULT_SINK=$(pacmd stat | sed -rn 's/Default sink name: (.*)/\1/p')
-VOLUME=$(pacmd list-sinks | sed -rn '/'"$DEFAULT_SINK"'/,/volume/ {s/^.*volume: 0: *([^ ]*).*/\1/p}')
+PACMD_LIST_SINKS="$(pacmd list-sinks)"
+VOLUME=$(echo "$PACMD_LIST_SINKS" | \
+         sed -rn '/'"$DEFAULT_SINK"'/,/volume/ {s/^.*volume: 0: *([^ ]*).*/\1/p}')
+MUTED=$(echo "$PACMD_LIST_SINKS" | \
+        sed -rn '/'"$DEFAULT_SINK"'/,/muted/ {s/^.*muted: *([^ ]*).*/\1/p}')
 
 case $BLOCK_BUTTON in
   1) pactl set-sink-mute @DEFAULT_SINK@ toggle ;;  # left click
@@ -10,4 +14,12 @@ case $BLOCK_BUTTON in
   5) pactl set-sink-volume @DEFAULT_SINK@ -- -5% ;; # scroll down, decrease
 esac
 
-echo $VOLUME
+if [ "$MUTED" == "yes" ]; then
+  echo mute
+  echo mute
+  echo "#FF0000"
+else
+  echo $VOLUME
+  echo $VOLUME
+  echo
+fi
