@@ -1,0 +1,13 @@
+#!/bin/bash
+
+DEFAULT_SINK=$(pacmd stat | sed -rn 's/Default sink name: (.*)/\1/p')
+VOLUME=$(pacmd list-sinks | sed -rn '/'"$DEFAULT_SINK"'/,/volume/ {s/^.*volume: 0: *([^ ]*).*/\1/p}')
+
+case $BLOCK_BUTTON in
+  1) pactl set-sink-mute @DEFAULT_SINK@ toggle ;;  # left click
+  3) pavucontrol ;; # right click
+  4) pactl set-sink-volume @DEFAULT_SINK@ -- +5% ;; # scroll up, increase
+  5) pactl set-sink-volume @DEFAULT_SINK@ -- -5% ;; # scroll down, decrease
+esac
+
+echo $VOLUME
