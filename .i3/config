@@ -50,6 +50,9 @@ client.urgent           $base02 $base08    $base00 $base0F
 
 # I don't need i3wm to show where the next split is going to be
 hide_edge_borders both
+
+# I want to leave fullscreen when there is a popup
+popup_during_fullscreen leave_fullscreen
 #)))
 
 # workspaces (((
@@ -115,7 +118,6 @@ for_window [title="Unlock private key"] floating enable border pixel 1
 for_window [class="XWrits"] floating
 for_window [class="Nautilus" instance="file_progress"] floating enable
 
-popup_during_fullscreen leave_fullscreen
 
 # keybindings (((
 # Use Mouse+$mod to drag floating windows to their wanted position
