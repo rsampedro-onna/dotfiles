@@ -353,4 +353,5 @@ exec xbacklight -set 10
 bindsym $mod+c exec google-chrome-stable
 bindsym $mod+n exec ~/bin/n2utilus.sh
 bindsym $mod+v exec ~/.vim-anywhere/bin/run
+bindsym $mod+u exec unity-control-center
 bindsym --release $mod+p exec gnome-screenshot --interactive
