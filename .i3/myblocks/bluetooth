@@ -2,13 +2,13 @@
 
 # Left click
 if [[ "${BLOCK_BUTTON}" -eq 1 ]]; then
-  bluetooth on > /dev/null
+  bluetooth toggle > /dev/null
 # Middle click
 elif [[ "${BLOCK_BUTTON}" -eq 2 ]]; then
   bluetooth toggle > /dev/null
 # Right click
 elif [[ "${BLOCK_BUTTON}" -eq 3 ]]; then
-  bluetooth off > /dev/null
+  unity-control-center bluetooth
 fi
 
 STATUS=$(bluetooth | grep -wo 'on')
