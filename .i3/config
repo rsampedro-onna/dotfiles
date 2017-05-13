@@ -342,7 +342,7 @@ exec --no-startup-id insync start
 exec --no-startup-id nm-applet
 exec --no-startup-id redshift
 exec --no-startup-id diodon
-exec --no-startup-id ~/.i3/i3-hud-menu/i3-appmenu-service.py
+exec --no-startup-id ~/.i3/i3-hud-menu/hud-menu-service.py
 exec xwrits typetime=30 breaktime=3 +breakclock after=5 +multiply
 exec urxvttmux.sh
 exec_always --no-startup-id "sleep 1 ; feh --bg-fill ~/Pictures/wallpaper-poly.jpg"
