@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Uncomment the following two lines for normal desktop:
+# unset SESSION_MANAGER
+# exec /etc/X11/xinit/xinitrc
+
+[ -x /etc/vnc/xstartup ] && exec /etc/vnc/xstartup
+[ -r $HOME/.Xresources ] && xrdb $HOME/.Xresources
+
+# Adds my home fonts (in order to add the resized cursor font)
+xset +fp $HOME/.fonts
+
+# Sets background grey
+xsetroot -solid grey
+
+# Sets the cursor to my custom resized font
+xsetroot -cursor_name X_cursor
+
+vncconfig -iconic &
+
+# the line below was an attempt to solve my keyboard issues, but it didn't work
+# setxkbmap -model br
+
+# Connects to or creates screen session
+# screen -ls | grep main && x-terminal-emulator -ls -title "$VNCDESKTOP Desktop" -fn "xft:DroidSansMono:pixelsize=25" -e screen -x main || x-terminal-emulator -ls -title "$VNCDESKTOP Desktop" -fn "xft:DroidSansMono:pixelsize=25" -e screen -e -R -S main &
+
+# Creates an independent terminal window
+# x-terminal-emulator -ls -title "$VNCDESKTOP Desktop" -fn "xft:DroidSansMono:pixelsize=25"
+
+# Starts a local terminal
+# x-terminal-emulator -geometry 80x24+10+10 -ls -title "$VNCDESKTOP Desktop" &
+
+x-window-manager &
