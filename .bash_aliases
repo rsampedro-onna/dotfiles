@@ -128,8 +128,8 @@ alias gv='gvim'
 #}}}
 # ps-related {{{
 
-pstop() { kill -STOP $( ps aux | perl -lane ' /'$1'/ and !/perl/ and print @F[1] and exit' ) ; }
-pcont() { kill -CONT $( ps aux | perl -lane ' /'$1'/ and !/perl/ and print @F[1] and exit' ) ; }
+pstop() { kill -STOP $( ps aux | perl -lane ' /'$1'/ and !/perl|\/bin\/sh/ and print @F[1] and exit' ) ; }
+pcont() { kill -CONT $( ps aux | perl -lane ' /'$1'/ and !/perl|\/bin\/sh/ and print @F[1] and exit' ) ; }
 alias kstop='killall -STOP'
 alias kcont='killall -CONT'
 
@@ -140,7 +140,8 @@ paug() {
   sed -nr -e '
     1p;                                          # cabeçalho
     /sed -nr -e/d;                               # não imprime cabeçalho
-    s/'$1'/'$abre_inv'&'$fecha_inv'/p            # inverte resultado '    
+    s/'$1'/'$abre_inv'&'$fecha_inv'/p            # inverte resultado 
+  '
 }
 
 #}}}
