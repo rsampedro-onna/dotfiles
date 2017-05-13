@@ -26,11 +26,11 @@ if [ "$0" = "/usr/sbin/lightdm-session" -a "$DESKTOP_SESSION" = "i3" ]; then
 fi
 
 export APPMENU_DISPLAY_BOTH=1
-if [ -n "$GTK_MODULES" ]; then
-  GTK_MODULES="$GTK_MODULES:unity-gtk-module"
-else
-  GTK_MODULES="unity-gtk-module"
-fi
+# if [ -n "$GTK_MODULES" ]; then
+#   GTK_MODULES="$GTK_MODULES:unity-gtk-module"
+# else
+#   GTK_MODULES="unity-gtk-module"
+# fi
 
 if [ -z "$UBUNTU_MENUPROXY" ]; then
   UBUNTU_MENUPROXY=1
