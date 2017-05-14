@@ -30,4 +30,6 @@ vncconfig -iconic &
 # Starts a local terminal
 # x-terminal-emulator -geometry 80x24+10+10 -ls -title "$VNCDESKTOP Desktop" &
 
-x-window-manager &
+# x-window-manager &
+
+i3 -c ~/.i3/config-vnc
