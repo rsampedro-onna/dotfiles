@@ -108,7 +108,7 @@ workspace $workspace10 output HDMI1
 bindsym $mod+b exec i3-input -P "Rename to : " -F 'rename workspace to "%s"' -f 'pango:System San Francisco Display-12'
 
 assign [class="Google-chrome"] $workspace2
-assign [title="PDF-XChange"] $workspace3
+# assign [title="PDF-XChange"] $workspace3
 assign [class="Rhythmbox" instance="rhythmbox"] $workspace10
 #)))
 # application-specific settings (((
@@ -342,7 +342,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id redshift
 exec --no-startup-id diodon
 exec --no-startup-id ~/.i3/i3-hud-menu/hud-menu-service.py
-exec xwrits typetime=30 breaktime=3 +breakclock after=5 +multiply
+exec xwrits typetime=60 breaktime=5 +breakclock after=5 +multiply
 exec urxvttmux.sh
 exec_always --no-startup-id "sleep 1 ; feh --bg-fill ~/Pictures/wallpaper-poly.jpg"
 exec xbacklight -set 10 # default brightness
