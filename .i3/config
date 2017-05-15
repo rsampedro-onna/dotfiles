@@ -139,7 +139,7 @@ bindsym $mod+Tab exec --no-startup-id /usr/local/bin/dmenu_run -i -fn 'System Sa
 # bindsym $mod+d exec rofi -show run -lines 5 -eh 2 -width 80 -padding 100 -opacity "80" -bw 0 -bc "$base01" -bg "$base02" -fg "$base07" -hlbg "$base05" -columns 2 -font "System San Francisco Display 18" -hlfg "#9575cd"
 
 # the hud-alike
-bindsym $mod+x exec ~/.i3/i3-hud-menu/hud-menu.py
+bindsym $mod+x exec ~/.i3/hud-menu/hud-menu.py dmenu
 
 # change focus
 bindsym $mod+h focus left
@@ -341,7 +341,7 @@ exec --no-startup-id insync start
 exec --no-startup-id nm-applet
 exec --no-startup-id redshift
 exec --no-startup-id diodon
-exec --no-startup-id ~/.i3/i3-hud-menu/hud-menu-service.py
+exec --no-startup-id ~/.i3/hud-menu/hud-menu-service.py
 exec xwrits typetime=60 breaktime=5 +breakclock after=5 +multiply
 exec urxvttmux.sh
 exec_always --no-startup-id "sleep 1 ; feh --bg-fill ~/Pictures/wallpaper-poly.jpg"
