@@ -37,14 +37,13 @@ if has('nvim')
   let g:pathogen_disabled += ['vim-sensible']
 endif
 
-" Deoplete is giving me weird errors. I don't use it anyways
 " Autocompletion 
-" if !has('nvim')
+if !has('nvim')
   let g:pathogen_disabled += ['deoplete.nvim']
   let g:pathogen_disabled += ['deoplete-jedi']
-" else
-  " let g:pathogen_disabled += ['jedi.vim']
-" endif
+else
+  let g:pathogen_disabled += ['jedi.vim']
+endif
 let g:pathogen_disabled += ['nvim-completion-manager']
 "
 " OR
