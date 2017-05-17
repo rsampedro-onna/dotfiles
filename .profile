@@ -25,7 +25,6 @@ if [ "$0" = "/usr/sbin/lightdm-session" -a "$DESKTOP_SESSION" = "i3" ]; then
     export $(gnome-keyring-daemon -s)
 fi
 
-export APPMENU_DISPLAY_BOTH=1
 if [ -n "$GTK_MODULES" ]; then
   GTK_MODULES="$GTK_MODULES:unity-gtk-module"
 else
@@ -36,5 +35,6 @@ if [ -z "$UBUNTU_MENUPROXY" ]; then
   UBUNTU_MENUPROXY=1
 fi
 
+export APPMENU_DISPLAY_BOTH=1
 export GTK_MODULES
 export UBUNTU_MENUPROXY
