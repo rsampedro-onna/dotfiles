@@ -135,7 +135,7 @@ if index(g:pathogen_disabled, 'vimtex') == -1
   let g:vimtex_fold_enabled = 1
   let g:vimtex_fold_manual = 1
   if has('nvim')
-    let g:vimtex_compiler_progname = '/usr/local/bin/nvr'
+    let g:vimtex_compiler_progname = 'nvr'
   endif
 endif
 
