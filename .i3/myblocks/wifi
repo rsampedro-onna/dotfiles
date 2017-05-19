@@ -32,10 +32,7 @@ QUALITY=$(grep $INTERFACE /proc/net/wireless | awk '{ print int($3 * 100 / 70) }
 #------------------------------------------------------------------------
 
 case $BLOCK_BUTTON in
-  1)                             ;; # left click
   3) gksudo nm-connection-editor ;; # right click
-  4)                             ;; # scroll up, increase
-  5)                             ;; # scroll down, decrease
 esac
 
 echo $QUALITY% # full text
