@@ -346,6 +346,8 @@ exec xwrits typetime=60 breaktime=5 +breakclock after=5 +multiply
 exec urxvttmux.sh
 exec_always --no-startup-id "sleep 1 ; feh --bg-fill ~/Pictures/wallpaper-poly.jpg"
 exec xbacklight -set 10 # default brightness
+exec --no-startup-id killall notify-osd
+exec --no-startup-id dunst
 #)))
 # application shortcuts
 bindsym $mod+c exec google-chrome-stable
