@@ -731,11 +731,12 @@ nnoremap <C-W>>>> :tabmove+3<CR>
 " `J` that doesn't change cursor position
 nnoremap <silent> J :let p=getpos('.')<BAR>join<BAR>call setpos('.',p)<CR>
 
-" " <tab> in normal mode toggles folds open/closed
-" " and this forces me to remap something else to <c-i> (jumplist)
-" nnoremap <TAB> za
-" nnoremap <C-U> <C-I>
-" " Instead of this, I'm using the plugin 'tabfold'
+" A logical mapping for . in visual mode
+vnoremap . :normal .<CR>
+
+" Easier access to the black hole
+nnoremap _ "_
+vnoremap _ "_
 
 " " `l` is kind of hard to reach sometimes
 " map <space> l
@@ -743,9 +744,6 @@ nnoremap <silent> J :let p=getpos('.')<BAR>join<BAR>call setpos('.',p)<CR>
 " " Making omnicompletion easier
 " inoremap <c-o> <c-x><c-o>
 " " I decided to use <c-o> for deoplete
-
-" A logical mapping for . in visual mode
-vnoremap . :normal .<CR>
 
 " make insert mode undo more granular {{{2
 
