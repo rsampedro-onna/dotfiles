@@ -283,6 +283,7 @@ if index(g:pathogen_disabled, 'plasticboy-markdown') == -1
     autocmd!
     autocmd FileType markdown setlocal commentstring=<!--%s-->
     autocmd FileType markdown setlocal conceallevel=2
+    autocmd FileType markdown setlocal concealcursor=
   augroup END
   " The mapping plasticboy-markdown gives me doesn't allow me to open pdfs
   map <Plug>Dont_OpenUrlUnderCursor <Plug>Markdown_OpenUrlUnderCursor
