@@ -240,3 +240,4 @@
 [submodule ".vim/bundle/zeavim.vim"]
 	path = .vim/bundle/zeavim.vim
 	url = https://github.com/KabbAmine/zeavim.vim
+  ignore = dirty
