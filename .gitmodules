@@ -241,3 +241,6 @@
 	path = .vim/bundle/zeavim.vim
 	url = https://github.com/KabbAmine/zeavim.vim
   ignore = dirty
+[submodule ".vim/bundle/vim-latexrefman"]
+	path = .vim/bundle/vim-latexrefman
+	url = https://github.com/poppyschmo/vim-latexrefman

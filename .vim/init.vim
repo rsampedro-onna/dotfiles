@@ -523,6 +523,12 @@ if index(g:pathogen_disabled, 'vim-surround') == -1
   let g:surround_no_insert_mappings = 1
 endif
 "}}}2
+" latexrefman {{{2
+if index(g:pathogen_disabled, 'vim-latexrefman') == -1
+  let g:latexrefman_use_example_mappings = 1
+  " to activate <leader>K in *tex and C-] in the documentation itself
+endif
+"}}}2
 "}}}1
 " Looks {{{1
 
