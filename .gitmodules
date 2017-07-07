@@ -71,9 +71,6 @@
 [submodule ".vim/bundle/targets.vim"]
 	path = .vim/bundle/targets.vim
 	url = https://github.com/wellle/targets.vim
-[submodule ".vim/bundle/TeX-9"]
-	path = .vim/bundle/TeX-9
-	url = https://github.com/vim-scripts/TeX-9
 [submodule ".vim/bundle/thesaurus_query.vim"]
 	path = .vim/bundle/thesaurus_query.vim
 	url = https://github.com/ron89/thesaurus_query.vim
