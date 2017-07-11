@@ -1094,7 +1094,7 @@ set virtualedit=block,insert
 " set autochdir
 augroup ChangeDir
   autocmd!
-  autocmd BufEnter * silent execute expand('%:p') !~# '\v(^/tmp/|^$|^fugitive|\.git/|/thesaurus: )' ? 'lcd %:p:h' : ''
+  autocmd BufEnter * silent execute expand('%:p') !~# '\v(^/tmp/|^$|^fugitive|\.git/|/thesaurus: |^term:)' ? 'lcd %:p:h' : ''
 augroup END
 
 " To allow hiding dotfiles by default. `gh` toggles hiding
