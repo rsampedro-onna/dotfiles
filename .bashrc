@@ -174,7 +174,7 @@ eval "$(pandoc --bash-completion)"
 
 # makes PS1 shorter by showing only the last directory
 # (`pwd` is your friend)
-PS1="$(echo $PS1|sed 's/\\w/\\W/') "
+PS1="$(echo $PS1|sed 's/\\w/\\W/g') "
 
 # use nvim as default man pager
 export MANPAGER="/bin/sh -c \" col -b | nvim -c 'set ft=man ts=8 nomod nolist nonu noma' - ; echo \""
