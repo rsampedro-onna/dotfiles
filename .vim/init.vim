@@ -998,9 +998,9 @@ endif
 if has('nvim')
   "" one day I'll be running a terminal with true colors...
   " set termguicolors
-  " set guicursor=n-v-c:block-Cursor/lCursor,ve:ver35-Cursor,o:hor50-Cursor,i-ci:ver25-Cursor/lCursor,r-cr:hor20-Cursor/lCursor,sm:block-Cursor-blinkwait175-blinkoff150-blinkon175
-  set guicursor=n-v-c:block-Cursor/lCursor-blinkon0,i-ci:ver25-Cursor/lCursor,r-cr:hor20-Cursor/lCursor
-else
+  " I don't need to set guicursor because the default is fine (and I never
+  " managed to achieve anything else but the default)
+else                                      
   " Change the cursor's color under xterm and rxvt
   " (doesn't work under terminal multiplexers or under nvim)
   if &term =~# "^xterm-color\\|^rxvt"
@@ -1027,12 +1027,12 @@ else
 
   " To change color and shape of the cursor under tmux
   function! TmuxCursor()
-    " Change color
-    let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]12;gray\x7\<Esc>\\"
-    let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]12;red\x7\<Esc>\\"
+    " Change color and shape
+    let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]12;gray\x7[2 q\<Esc>\\"
+    let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]12;red\x7[5 q\<Esc>\\"
     " Change shape
-    let &t_EI .= "\<Esc>Ptmux;\<Esc>\<Esc>[2 q\<Esc>\\"
-    let &t_SI .= "\<Esc>Ptmux;\<Esc>\<Esc>[5 q\<Esc>\\"
+    " let &t_EI .= "\<Esc>Ptmux;\<Esc>\<Esc>[2 q\<Esc>\\"
+    " let &t_SI .= "\<Esc>Ptmux;\<Esc>\<Esc>[6 q\<Esc>\\"
     augroup cursorColor
       autocmd!
       autocmd VimEnter * silent !echo -ne "\033Ptmux;\033\033]12;gray\007\033\\"

@@ -119,8 +119,8 @@ neovim_server_python() {
 }
 
 # alias vim='vim --servername vim'
-alias vim='neovim_start_server'
-alias v='neovim_start_server'
+alias vim='TERM=rxvt-unicode-256color neovim_start_server'
+alias v='TERM=rxvt-unicode-256color neovim_start_server'
 alias s='neovim_nvr'
 alias sv='svim'
 alias gv='gvim'
