@@ -3,6 +3,10 @@
 scriptencoding utf-8
 set encoding=utf-8
 
+augroup vimRC
+  autocmd!
+augroup END
+
 " Plugin-related stuff {{{1
 
 filetype plugin on
@@ -606,7 +610,6 @@ set hlsearch   " highlight all matches of a search
 
 let g:xml_syntax_folding=1
 augroup vimRC
-  autocmd!
   au FileType xml setlocal foldmethod=syntax
 augroup END
 
@@ -955,6 +958,10 @@ nnoremap <leader>g :call <SID>create_quickfix()<CR>
 ""}}}1
 " Terminal tweaks {{{1
 
+if has('nvim')
+  let $TERM='rxvt-unicode-256color'
+endif
+
 " in order to make ctrl+arrow work in the terminal
 if &term =~# '\vscreen|tmux'
   noremap  [1;5C <C-Right>
@@ -1195,7 +1202,6 @@ augroup END
 "}}}2
 " Resizes splits whenever Vim itself is resized {{{2
 augroup vimRC
-  autocmd!
   autocmd VimResized * wincmd =
 augroup END
 "}}}2
