@@ -958,10 +958,6 @@ nnoremap <leader>g :call <SID>create_quickfix()<CR>
 ""}}}1
 " Terminal tweaks {{{1
 
-if has('nvim')
-  let $TERM='rxvt-unicode-256color'
-endif
-
 " in order to make ctrl+arrow work in the terminal
 if &term =~# '\vscreen|tmux'
   noremap  [1;5C <C-Right>
