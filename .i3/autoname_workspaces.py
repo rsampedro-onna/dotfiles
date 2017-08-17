@@ -57,6 +57,7 @@ WINDOW_ICONS = {
     'gvim': fa.icons['pencil-square-o'],
     'libreoffice': fa.icons['file-text-o'],
     'mupdf': fa.icons['file-pdf-o'],
+    'qbittorrent': fa.icons['download'],
     'spotify': fa.icons['music'],  # could also use the 'spotify' icon
     'steam': fa.icons['steam'],
     'subl': fa.icons['file-text-o'],
