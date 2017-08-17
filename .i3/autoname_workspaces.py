@@ -57,6 +57,8 @@ WINDOW_ICONS = {
     'gvim': fa.icons['pencil-square-o'],
     'libreoffice': fa.icons['file-text-o'],
     'mupdf': fa.icons['file-pdf-o'],
+    'nautilus': fa.icons['floppy-o'],
+    'pdfxedit.exe': fa.icons['bookmark'],
     'qbittorrent': fa.icons['download'],
     'spotify': fa.icons['music'],  # could also use the 'spotify' icon
     'steam': fa.icons['steam'],
@@ -65,7 +67,7 @@ WINDOW_ICONS = {
     'thunar': fa.icons['files-o'],
     'urxvt': fa.icons['terminal'],
     'zenity': fa.icons['window-maximize'],
-    'zathura': fa.icons['bookmark'],
+    'zathura': fa.icons['file-pdf-o'],
 }
 
 # This icon is used for any application not in the list above
