@@ -141,6 +141,16 @@ if index(g:pathogen_disabled, 'vimtex') == -1
   if has('nvim')
     let g:vimtex_compiler_progname = 'nvr'
   endif
+
+  let g:vimtex_doc_handlers = ['MyHandler']   
+  function! MyHandler(context)                
+    call vimtex#doc#make_selection(a:context) 
+    if !empty(a:context.selected)             
+      execute '!texdoc' a:context.selected '&'
+    endif                                     
+    return 1                                  
+  endfunction                                 
+
 endif
 
 "}}}2
