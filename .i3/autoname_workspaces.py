@@ -65,6 +65,7 @@ WINDOW_ICONS = {
     'thunar': fa.icons['files-o'],
     'urxvt': fa.icons['terminal'],
     'zenity': fa.icons['window-maximize'],
+    'zathura': fa.icons['bookmark'],
 }
 
 # This icon is used for any application not in the list above
