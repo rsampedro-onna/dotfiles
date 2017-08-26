@@ -22,6 +22,7 @@ alias eal='ls -la'
 alias gvimdiff='gvimdiff -f'
 alias info='info --vi-keys'
 alias transcriber='padsp transcriber'
+alias td='v ~/Dropbox/Notas/afazeres.mkd'
 alias rmtex='trash *.{aux,bbl,blg,dvi,log,gz,xml,out,bcf,fls,ist,lzo,lzs,glg,nav,snm} *{-blx.bib,fdb_latexmk,-tags.tex}'
 alias df='df -h'
 alias rpi_ip="arp -a | grep b8:27:eb | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}'"
