@@ -67,8 +67,9 @@ WINDOW_ICONS = {
     'subl': fa.icons['file-text-o'],
     'subl3': fa.icons['file-text-o'],
     'thunar': fa.icons['files-o'],
-    'totem': fa.icons['video-camera'],
+    'totem': fa.icons['caret-square-o-right'],
     'urxvt': fa.icons['terminal'],
+    'virtualbox': fa.icons['windows'],
     'zenity': fa.icons['window-maximize'],
     'zathura': fa.icons['file-pdf-o'],
 }
