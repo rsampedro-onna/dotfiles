@@ -167,11 +167,11 @@ bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
 
-# alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+# # alternatively, you can use the cursor keys:
+# bindsym $mod+Left focus left
+# bindsym $mod+Down focus down
+# bindsym $mod+Up focus up
+# bindsym $mod+Right focus right
 
 # move focused window
 bindsym $mod+Shift+h move left
@@ -179,11 +179,11 @@ bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
-# alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+# # alternatively, you can use the cursor keys:
+# bindsym $mod+Shift+Left move left
+# bindsym $mod+Shift+Down move down
+# bindsym $mod+Shift+Up move up
+# bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
 bindsym $mod+slash split h
@@ -378,4 +378,10 @@ bindsym $mod+c exec google-chrome-stable
 bindsym $mod+n exec ~/bin/n2utilus.sh
 bindsym $mod+v exec ~/.vim-anywhere/bin/run
 bindsym $mod+u exec unity-control-center
+bindsym $mod+i exec ~/bin/inverted-landscape.sh
+bindsym $mod+Up exec ~/bin/inverted-landscape.sh
+bindsym $mod+Down exec ~/bin/inverted-landscape.sh
+bindsym $mod+Right exec ~/bin/portrait-landscape.sh
+bindsym $mod+Left exec ~/bin/portrait-leftlandscape.sh
+
 bindsym --release $mod+p exec gnome-screenshot --interactive
