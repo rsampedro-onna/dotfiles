@@ -1041,8 +1041,8 @@ else
   " To change color and shape of the cursor under tmux
   function! TmuxCursor()
     " Change color and shape
-    let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]12;gray\x7[2 q\<Esc>\\"
-    let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]12;red\x7[5 q\<Esc>\\"
+    let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]12;gray\x7\<Esc>\\"
+    let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]12;red\x7\<Esc>\\"
     " Change shape
     " let &t_EI .= "\<Esc>Ptmux;\<Esc>\<Esc>[2 q\<Esc>\\"
     " let &t_SI .= "\<Esc>Ptmux;\<Esc>\<Esc>[6 q\<Esc>\\"
