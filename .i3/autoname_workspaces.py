@@ -73,6 +73,8 @@ WINDOW_ICONS = {
     'zenity': fa.icons['window-maximize'],
     'zathura': fa.icons['file-pdf-o'],
     'unity-control-center': fa.icons['cog'],
+    'audacious': fa.icons['music'],
+    'pavucontrol': fa.icons['volume-up'],
 }
 
 # This icon is used for any application not in the list above
