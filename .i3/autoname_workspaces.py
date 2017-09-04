@@ -72,6 +72,7 @@ WINDOW_ICONS = {
     'virtualbox': fa.icons['windows'],
     'zenity': fa.icons['window-maximize'],
     'zathura': fa.icons['file-pdf-o'],
+    'unity-control-center': fa.icons['cog'],
 }
 
 # This icon is used for any application not in the list above

@@ -390,15 +390,12 @@ endif
 "}}}2
 " vim-slash {{{2
 if index(g:pathogen_disabled, 'vim-slash') == -1
-  " function! s:flash()
-  "   set cursorline!
-  "   redraw
-  "   sleep 20m
-  "   set cursorline!
-  "   return ''
-  " endfunction
 
-  " noremap <expr> <plug>(slash-after) <sid>flash()
+  if has('timers')
+    " Blink 2 times with 50ms interval
+    noremap <expr> <plug>(slash-after) slash#blink(2, 50)
+  endif
+
 endif
 "}}}2
 " jedi-vim {{{2
@@ -465,11 +462,14 @@ endif
 "}}}2
 " comfortable-motion {{{2
 if index(g:pathogen_disabled, 'comfortable-motion') == -1
+
   let g:comfortable_motion_no_default_key_mappings = 1
-  nnoremap <silent> <C-d> :call comfortable_motion#flick(100)<CR>
-  nnoremap <silent> <C-u> :call comfortable_motion#flick(-100)<CR>
-  nnoremap <silent> <C-f> :call comfortable_motion#flick(125)<CR>
-  nnoremap <silent> <C-b> :call comfortable_motion#flick(-125)<CR>
+  let g:comfortable_motion_impulse_multiplier = 1  " Feel free to increase/decrease this value.
+  nnoremap <silent> <C-d> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * 2)<CR>
+  nnoremap <silent> <C-u> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * -2)<CR>
+  nnoremap <silent> <C-f> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * 4)<CR>
+  nnoremap <silent> <C-b> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * -4)<CR>
+
 endif
 "}}}2
 " vim-LanguageTool {{{2
