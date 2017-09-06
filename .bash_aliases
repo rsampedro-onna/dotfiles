@@ -211,12 +211,18 @@ alias cd-='cd -'
 
 function ranger-cd {
     tempfile="$(mktemp -t tmp.XXXXXX)"
+    if [ -n $TMUX ]; then
+        tmux rename-window ranger
+    fi
     EDITOR=nvim /usr/local/bin/ranger --choosedir="$tempfile" "${@:-$(pwd)}"
     test -f "$tempfile" &&
     if [ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]; then
         command cd -- "$(cat "$tempfile")"
     fi
     rm -f -- "$tempfile"
+    if [ -n $TMUX ]; then
+        tmux set automatic-rename
+    fi
 }
 
 alias ranger=ranger-cd
