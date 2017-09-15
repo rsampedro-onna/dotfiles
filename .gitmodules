@@ -241,3 +241,6 @@
 [submodule ".vim/bundle/vim-latexrefman"]
 	path = .vim/bundle/vim-latexrefman
 	url = https://github.com/poppyschmo/vim-latexrefman
+[submodule ".vim/bundle/vim-sandwich"]
+	path = .vim/bundle/vim-sandwich
+	url = https://github.com/machakann/vim-sandwich

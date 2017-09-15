@@ -97,6 +97,10 @@ if exists('+winhighlight')
     au FocusLost * hi link MyNormalWin MyInactiveWin
   augroup END
 endif
+
+" Now I'm using vim-sandwich
+let g:pathogen_disabled += ['vim-surround']
+let g:pathogen_disabled += ['smartpairs.vim']
 "}}}3
 
 " to load the plugins in the 'bundles' folder
@@ -541,6 +545,19 @@ endif
 if index(g:pathogen_disabled, 'vim-latexrefman') == -1
   let g:latexrefman_use_example_mappings = 1
   " to activate <leader>K in *tex and C-] in the documentation itself
+endif
+"}}}2
+" vim-sandwich {{{2
+if index(g:pathogen_disabled, 'vim-sandwich') == -1
+  runtime macros/sandwich/keymap/surround.vim
+  " xmap iv <Plug>(textobj-sandwich-query-i)
+  " xmap av <Plug>(textobj-sandwich-query-a)
+  " omap iv <Plug>(textobj-sandwich-query-i)
+  " omap av <Plug>(textobj-sandwich-query-a)
+  xmap iv <Plug>(textobj-sandwich-auto-i)
+  xmap av <Plug>(textobj-sandwich-auto-a)
+  omap iv <Plug>(textobj-sandwich-auto-i)
+  omap av <Plug>(textobj-sandwich-auto-a)
 endif
 "}}}2
 "}}}1
