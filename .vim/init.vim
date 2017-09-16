@@ -28,13 +28,10 @@ let g:pathogen_disabled += ['repmo.vim']
 let g:pathogen_disabled += ['vim-pandoc', 'vim-pandoc-after']
 let g:pathogen_disabled += ['vim-pandoc-syntax']
 "" these had seemed like they had been abandoned, but then there was some
-"" activity on github
+"" activity on github.
 let g:pathogen_disabled += ['tpope-markdown']
 "" tim pope's variant doesn't understand item continuations
 " let g:pathogen_disabled += ['plasticboy-markdown']
-
-" I'm using vimtex as my LaTeX plugin
-let g:pathogen_disabled += ['TeX-9']
 
 " Nvim already includes the same defaults as sensible.vim
 if has('nvim')
@@ -42,15 +39,15 @@ if has('nvim')
 endif
 
 " Autocompletion 
+let g:pathogen_disabled += ['nvim-completion-manager']
 if !has('nvim')
   let g:pathogen_disabled += ['deoplete.nvim']
   let g:pathogen_disabled += ['deoplete-jedi']
 else
   let g:pathogen_disabled += ['jedi.vim']
 endif
-let g:pathogen_disabled += ['nvim-completion-manager']
-"
-" OR
+
+" " OR
 "
 " let g:pathogen_disabled += ['deoplete.nvim']
 " let g:pathogen_disabled += ['deoplete-jedi']
@@ -59,44 +56,37 @@ let g:pathogen_disabled += ['nvim-completion-manager']
 " endif
 
 " I always forget how this creates problems and end up reenabling it after a
-" while. The last thing problem I found out about is that when I yank with a .
+" while. The last problem I found out about is that when I yank with a dot
 " command, it doesn't go into the stack. I thought of reporting a bug on
 " github, but was discouraged by the fact that there are unanswered bug
 " reports from 2015.
 let g:pathogen_disabled += ['vim-yankstack']
 
-" copied from https://github.com/neovim/neovim/pull/6597
-if exists('+winhighlight')
-  let g:pathogen_disabled += ['vim-diminactive']
-  function! s:configure_winhighlights(...)
-    let winnr = a:0 ? a:1 : winnr()
-    let force = a:0 > 1 ? a:2 : 0
-    if !force
-      if a:0
-        let ft = getbufvar(winbufnr(winnr), '&filetype')
-        let bt = getbufvar(winbufnr(winnr), '&buftype')
-      else
-        let ft = &filetype
-        let bt = &buftype
-      endif
-      " Check white/blacklist.
-      if index(['dirvish'], ft) == -1
-            \ && (index(['nofile', 'nowrite', 'acwrite', 'quickfix', 'help'], bt) != -1
-            \     || index(['startify'], ft) != -1)
-        call setwinvar(winnr, '&winhighlight', 'Normal:MyNormalWin,NormalNC:MyNormalWin')
-        return
-      endif
-    endif
-    call setwinvar(winnr, '&winhighlight', 'Normal:MyNormalWin,NormalNC:MyInactiveWin')
-  endfunction
-  augroup inactive_win
-    au!
-    au ColorScheme * hi MyInactiveWin ctermbg=18 | hi link MyNormalWin Normal
-    au FileType,WinNew * call s:configure_winhighlights()
-    au FocusGained * hi link MyNormalWin Normal
-    au FocusLost * hi link MyNormalWin MyInactiveWin
-  augroup END
-endif
+" " copied from https://github.com/neovim/neovim/pull/6597
+" if exists('+winhighlight')
+"   let g:pathogen_disabled += ['vim-diminactive']
+"   function! s:configure_winhighlight()
+"     let ft = &filetype
+"     let bt = &buftype
+"     " Check white/blacklist.
+"     if index(['dirvish'], ft) == -1
+"           \ && (index(['nofile', 'nowrite', 'acwrite', 'quickfix', 'help'], bt) != -1
+"           \     || index(['startify'], ft) != -1)
+"       set winhighlight=Normal:MyNormalWin,NormalNC:MyNormalWin
+"       " echom "normal" winnr() &winhighlight 'ft:'.&ft 'bt:'.&bt
+"     else
+"       set winhighlight=Normal:MyNormalWin,NormalNC:MyInactiveWin
+"       " echom "inactive" winnr() &winhighlight 'ft:'.&ft 'bt:'.&bt
+"     endif
+"   endfunction
+"   augroup inactive_win
+"     au!
+"     au ColorScheme * hi link MyInactiveWin ColorColumn | hi link MyNormalWin Normal
+"     au FileType,BufWinEnter * call s:configure_winhighlight()
+"     au FocusGained * hi link MyNormalWin Normal
+"     au FocusLost * hi link MyNormalWin MyInactiveWin
+"   augroup END
+" endif
 
 " Now I'm using vim-sandwich
 let g:pathogen_disabled += ['vim-surround']
@@ -394,12 +384,10 @@ endif
 "}}}2
 " vim-slash {{{2
 if index(g:pathogen_disabled, 'vim-slash') == -1
-
-  if has('timers')
-    " Blink 2 times with 50ms interval
-    noremap <expr> <plug>(slash-after) slash#blink(2, 50)
-  endif
-
+  " if has('timers')
+  "   " Blink 2 times with 50ms interval
+  "   noremap <expr> <plug>(slash-after) slash#blink(2, 50)
+  " endif
 endif
 "}}}2
 " jedi-vim {{{2
