@@ -62,31 +62,31 @@ endif
 " reports from 2015.
 let g:pathogen_disabled += ['vim-yankstack']
 
-" " copied from https://github.com/neovim/neovim/pull/6597
-" if exists('+winhighlight')
-"   let g:pathogen_disabled += ['vim-diminactive']
-"   function! s:configure_winhighlight()
-"     let ft = &filetype
-"     let bt = &buftype
-"     " Check white/blacklist.
-"     if index(['dirvish'], ft) == -1
-"           \ && (index(['nofile', 'nowrite', 'acwrite', 'quickfix', 'help'], bt) != -1
-"           \     || index(['startify'], ft) != -1)
-"       set winhighlight=Normal:MyNormalWin,NormalNC:MyNormalWin
-"       " echom "normal" winnr() &winhighlight 'ft:'.&ft 'bt:'.&bt
-"     else
-"       set winhighlight=Normal:MyNormalWin,NormalNC:MyInactiveWin
-"       " echom "inactive" winnr() &winhighlight 'ft:'.&ft 'bt:'.&bt
-"     endif
-"   endfunction
-"   augroup inactive_win
-"     au!
-"     au ColorScheme * hi link MyInactiveWin ColorColumn | hi link MyNormalWin Normal
-"     au FileType,BufWinEnter * call s:configure_winhighlight()
-"     au FocusGained * hi link MyNormalWin Normal
-"     au FocusLost * hi link MyNormalWin MyInactiveWin
-"   augroup END
-" endif
+" copied from https://github.com/neovim/neovim/pull/6597
+if exists('+winhighlight')
+  let g:pathogen_disabled += ['vim-diminactive']
+  function! s:configure_winhighlight()
+    let ft = &filetype
+    let bt = &buftype
+    " Check white/blacklist.
+    if index(['dirvish'], ft) == -1
+          \ && (index(['nofile', 'nowrite', 'acwrite', 'quickfix', 'help'], bt) != -1
+          \     || index(['startify'], ft) != -1)
+      set winhighlight=Normal:MyNormalWin,NormalNC:MyNormalWin
+      " echom "normal" winnr() &winhighlight 'ft:'.&ft 'bt:'.&bt
+    else
+      set winhighlight=Normal:MyNormalWin,NormalNC:MyInactiveWin
+      " echom "inactive" winnr() &winhighlight 'ft:'.&ft 'bt:'.&bt
+    endif
+  endfunction
+  augroup inactive_win
+    au!
+    au ColorScheme * hi link MyInactiveWin ColorColumn | hi link MyNormalWin Normal
+    au FileType,BufWinEnter * call s:configure_winhighlight()
+    au FocusGained * hi link MyNormalWin Normal
+    au FocusLost * hi link MyNormalWin MyInactiveWin
+  augroup END
+endif
 
 " Now I'm using vim-sandwich
 let g:pathogen_disabled += ['vim-surround']
