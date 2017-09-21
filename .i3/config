@@ -371,7 +371,7 @@ exec --no-startup-id dunst
 #)))
 # application shortcuts
 bindsym $mod+c exec google-chrome-stable
-bindsym $mod+n exec ~/bin/n2utilus.sh
+bindsym $mod+n exec nautilus
 bindsym $mod+v exec ~/.vim-anywhere/bin/run
 bindsym $mod+u exec unity-control-center
 bindsym --release $mod+p exec gnome-screenshot --interactive
