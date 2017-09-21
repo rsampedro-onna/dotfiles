@@ -357,11 +357,11 @@ set rtp+=~/.fzf
 
 if index(g:pathogen_disabled, 'fzf.vim') == -1
   imap <c-x><c-f> <plug>(fzf-complete-path)
+  let g:fzf_command_prefix='F'
   nnoremap <BS>o :FHistory<CR>
   nnoremap <BS>u :FBuffers<CR>
   nnoremap <BS>/ :FBLines<CR>
   nnoremap <BS>f :FFiles<CR>
-  let g:fzf_command_prefix='F'
 endif
 "}}}2
 " vim-table-mode {{{2
@@ -1091,7 +1091,9 @@ set undofile
 "   %      : saves and restores the buffer list
 "   n...   : where to save the viminfo files
 if !has('nvim')
-  set viminfo='1000,\"1000,:100000,%,n~/.viminfo
+  set viminfo='10000,\"1000,:100000,%,n~/.viminfo
+else
+  set shada=!,'10000,/10000,:100000,%,<50,s10,h  
 endif
 
 " for cmdline completion to work like in the shell
