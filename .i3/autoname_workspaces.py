@@ -55,6 +55,7 @@ WINDOW_ICONS = {
     'google-chrome': fa.icons['chrome'],
     'gpick': fa.icons['eyedropper'],
     'gvim': fa.icons['pencil-square-o'],
+    'gnome-disks': fa.icons['hdd-o'],
     # 'gvim': fa.icons['slack'],
     'libreoffice': fa.icons['file-text-o'],
     'mupdf': fa.icons['file-pdf-o'],
