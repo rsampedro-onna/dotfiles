@@ -73,6 +73,7 @@ WINDOW_ICONS = {
     'totem': fa.icons['caret-square-o-right'],
     'urxvt': fa.icons['terminal'],
     'virtualbox': fa.icons['windows'],
+    'xwrits': fa.icons['hand-spock-o'],
     'zenity': fa.icons['window-maximize'],
     'zathura': fa.icons['file-pdf-o'],
     'unity-control-center': fa.icons['cog'],
