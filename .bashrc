@@ -181,3 +181,5 @@ export MANPAGER="/bin/sh -c \" col -b | nvim -c 'set ft=man ts=8 nomod nolist no
 
 BASE16_SHELL=$HOME/.config/base16-shell/                                                            
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+
+PATH=$PATH:/opt/freerdp-nightly/bin/
