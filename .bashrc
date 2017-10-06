@@ -156,18 +156,18 @@ fi
 #   PROMPT_COMMAND="set_title_of_multiplexers_window; $PROMPT_COMMAND"
 # fi
 
-EDITOR=nvim
-
-_Z_CMD=c
-
-. ~/bin/z/z.sh
+[ "$HOSTNAME" != "Z835" ] &&
+  EDITOR=nvim &&
+  _Z_CMD=c &&
+  . ~/bin/z/z.sh
 
 set -o vi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # activates pandoc's bash completion
-eval "$(pandoc --bash-completion)"
+[ "$HOSTNAME" != "Z835" ] &&
+  eval "$(pandoc --bash-completion)"
 
 # activates tmux's bash completion
 . /usr/share/doc/tmux/examples/bash_completion_tmux.sh
@@ -177,7 +177,8 @@ eval "$(pandoc --bash-completion)"
 PS1="$(echo $PS1|sed 's/\\w/\\W/g') "
 
 # use nvim as default man pager
-export MANPAGER="/bin/sh -c \" col -b | nvim -c 'set ft=man ts=8 nomod nolist nonu noma' - ; echo \""
+[ "$HOSTNAME" != "Z835" ] &&
+  export MANPAGER="/bin/sh -c \" col -b | nvim -c 'set ft=man ts=8 nomod nolist nonu noma' - ; echo \""
 
 BASE16_SHELL=$HOME/.config/base16-shell/                                                            
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"

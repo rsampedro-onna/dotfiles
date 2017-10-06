@@ -120,11 +120,12 @@ neovim_server_python() {
 }
 
 # alias vim='vim --servername vim'
-alias vim='neovim_start_server'
-alias v='neovim_start_server'
-alias s='neovim_nvr'
-alias sv='svim'
-alias gv='gvim'
+[ $HOSTNAME != Z835 ] &&
+  alias vim='neovim_start_server' &&
+  alias v='neovim_start_server' &&
+  alias s='neovim_nvr' &&
+  alias sv='svim' &&
+  alias gv='gvim'
 
 #}}}
 # ps-related {{{
