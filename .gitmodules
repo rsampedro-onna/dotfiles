@@ -241,3 +241,6 @@
 [submodule ".vim/bundle/vim-sandwich"]
 	path = .vim/bundle/vim-sandwich
 	url = https://github.com/machakann/vim-sandwich
+[submodule "base16-vim"]
+	path = .vim/bundle/base16-vim
+	url = https://github.com/rafaeln/base16-vim
