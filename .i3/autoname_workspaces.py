@@ -73,6 +73,7 @@ WINDOW_ICONS = {
     'totem': fa.icons['caret-square-o-right'],
     'urxvt': fa.icons['terminal'],
     'virtualbox': fa.icons['windows'],
+    'xfreerdp': fa.icons['windows'],
     'xwrits': fa.icons['hand-spock-o'],
     'zenity': fa.icons['window-maximize'],
     'zathura': fa.icons['file-pdf-o'],
@@ -82,8 +83,7 @@ WINDOW_ICONS = {
 }
 
 # This icon is used for any application not in the list above
-DEFAULT_ICON = '*'
-
+DEFAULT_ICON = fa.icons['window-maximize']
 
 def icon_for_window(window):
     # Try all window classes and use the first one we have an icon for
