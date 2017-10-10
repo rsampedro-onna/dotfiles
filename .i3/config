@@ -58,29 +58,6 @@ popup_during_fullscreen leave_fullscreen
 
 workspace_layout tabbed
 
-# set $workspace1 "1: "
-# set $workspace2 "2: "
-# set $workspace3 "3: "
-# set $workspace4 "4: "
-# set $workspace5 "5: "
-# set $workspace6 "6: "
-# set $workspace7 "7: "
-# set $workspace8 "8: "
-# set $workspace9 "9: "
-# set $workspace10 "10: "
-
-# switch to workspace
-# bindsym $mod+1 workspace $workspace1
-# bindsym $mod+2 workspace $workspace2
-# bindsym $mod+3 workspace $workspace3
-# bindsym $mod+4 workspace $workspace4
-# bindsym $mod+5 workspace $workspace5
-# bindsym $mod+6 workspace $workspace6
-# bindsym $mod+7 workspace $workspace7
-# bindsym $mod+8 workspace $workspace8
-# bindsym $mod+9 workspace $workspace9
-# bindsym $mod+0 workspace $workspace10
-
 # switch to workspace
 bindsym $mod+1 workspace number 1
 bindsym $mod+2 workspace number 2
@@ -105,27 +82,8 @@ bindsym $mod+Shift+8 move container to workspace number 8
 bindsym $mod+Shift+9 move container to workspace number 9
 bindsym $mod+Shift+0 move container to workspace number 10
 
-workspace 1 output eDP1 
-workspace 2 output DP2
-workspace 3 output eDP1 
-workspace 4 output DP2
-workspace 5 output eDP1
-workspace 6 output DP2
-workspace 7 output eDP1
-workspace 8 output DP2
-workspace 9 output eDP1
-workspace 10 output DP2
-
-# workspace $workspace1 output eDP1 
-# workspace $workspace2 output HDMI1
-# workspace $workspace3 output eDP1 
-# workspace $workspace4 output HDMI1
-# workspace $workspace5 output eDP1
-# workspace $workspace6 output HDMI1
-# workspace $workspace7 output eDP1
-# workspace $workspace8 output HDMI1
-# workspace $workspace9 output eDP1
-# workspace $workspace10 output HDMI1
+bindsym $mod+bracketright move workspace to output right
+bindsym $mod+bracketleft move workspace to output left
 
 # assign [class="Google-chrome"] $workspace2
 # assign [title="PDF-XChange"] $workspace3
