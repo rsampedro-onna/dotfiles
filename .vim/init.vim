@@ -62,29 +62,29 @@ endif
 " reports from 2015.
 let g:pathogen_disabled += ['vim-yankstack']
 
-" " copied from https://github.com/neovim/neovim/pull/6597
+" " copied from https://github.com/neovim/neovim/issues/7375#issuecomment-336704099
 " if exists('+winhighlight')
 "   let g:pathogen_disabled += ['vim-diminactive']
 "   function! s:configure_winhighlight()
 "     let ft = &filetype
 "     let bt = &buftype
 "     " Check white/blacklist.
-"     if index(['dirvish'], ft) == -1
+"     if &diff || (index(['dirvish'], ft) == -1
 "           \ && (index(['nofile', 'nowrite', 'acwrite', 'quickfix', 'help'], bt) != -1
-"           \     || index(['startify'], ft) != -1)
-"       set winhighlight=Normal:MyNormalWin,NormalNC:MyNormalWin
-"       " echom "normal" winnr() &winhighlight 'ft:'.&ft 'bt:'.&bt
+"           \     || index(['startify'], ft) != -1))
+"       set winhighlight=NormalNC:MyNormalWin
 "     else
-"       set winhighlight=Normal:MyNormalWin,NormalNC:MyInactiveWin
-"       " echom "inactive" winnr() &winhighlight 'ft:'.&ft 'bt:'.&bt
+"       set winhighlight=NormalNC:MyInactiveWin
 "     endif
 "   endfunction
 "   augroup inactive_win
 "     au!
-"     au ColorScheme * hi link MyInactiveWin ColorColumn | hi link MyNormalWin Normal
+"     au ColorScheme * hi link MyInactiveWin ColorColumn
 "     au FileType,BufWinEnter * call s:configure_winhighlight()
-"     au FocusGained * hi link MyNormalWin Normal
-"     au FocusLost * hi link MyNormalWin MyInactiveWin
+"     if exists('##OptionSet')
+"       " TODO: does not work with :Gdiff - diffsplit does not trigger it, too!
+"       au OptionSet diff call s:configure_winhighlight()
+"     endif
 "   augroup END
 " endif
 
