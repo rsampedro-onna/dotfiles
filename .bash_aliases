@@ -51,7 +51,7 @@ alias pv='youtube-dl -o - $(xsel) | mpv -'
 alias sunmoon='gcal -c -Hno --moonimage-line=21'
 alias ptop='sudo powertop'
 alias umutt='mutt -F ~/.muttrc-umail'
-
+alias a=audacious
 # }}}
 # Functions {{{
 
