@@ -275,9 +275,10 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute        exec --no-startup-id pactl set-sink-mute   @DEFAULT_SINK@   toggle # mute sound
 bindsym XF86AudioMicMute     exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle # mute sound
 
-# Sreen brightness controls
+# Screen brightness controls
 bindsym XF86MonBrightnessUp   exec xbacklight -inc 5 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
+bindsym $mod+b                exec ~/bin/turns-screen-on-off.sh # [b]lanks and un[b]lanks screen
 
 # Media player controls
 bindsym XF86AudioPlay  exec playerctl play-pause
@@ -323,7 +324,7 @@ exec urxvttmux.sh
 exec_always --no-startup-id "sleep 1 ; feh --bg-fill ~/Pictures/wallpaper-poly.jpg"
 exec_always ~/.i3/autoname_workspaces.py
 
-exec xbacklight -set 10 # default brightness
+exec xbacklight -set 30 # default brightness
 exec --no-startup-id killall notify-osd
 exec --no-startup-id dunst
 #)))
