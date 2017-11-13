@@ -12,6 +12,7 @@ dig 66   600  " closed-mid central          ɘ
 dig GG   611  " velar fricative             ɣ
 dig gg   609  " IPA-styled g                ɡ 
 dig hh   688  " aspirated                   ʰ
+dig hs   614  " voiced glottal fricative    ɦ
 dig ii   616  " barred i                    ɨ
 dig i.   305  " dotless i                   ı
 dig ie   618  " small caps i                ɪ
