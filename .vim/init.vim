@@ -144,7 +144,6 @@ if index(g:pathogen_disabled, 'vimtex') == -1
     endif                                     
     return 1                                  
   endfunction                                 
-
 endif
 
 "}}}2
