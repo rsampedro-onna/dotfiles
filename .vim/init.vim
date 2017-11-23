@@ -93,6 +93,11 @@ let g:pathogen_disabled += ['vim-surround']
 let g:pathogen_disabled += ['smartpairs.vim']
 "}}}3
 
+" This seems to be broken in vim
+if !has('nvim')
+  let g:pathogen_disabled += ['vim-highlightedyank']
+endif
+
 " to load the plugins in the 'bundles' folder
 execute pathogen#infect()
 
