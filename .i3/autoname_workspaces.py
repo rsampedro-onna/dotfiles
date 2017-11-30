@@ -64,7 +64,7 @@ WINDOW_ICONS = {
     # 'nautilus': fa.icons['file'],
     'pdfxedit.exe': fa.icons['bookmark'],
     'qbittorrent': fa.icons['cloud-download'],
-    'skypeforlinux': fa.icons['skype'],
+    'skype': fa.icons['skype'],
     'spotify': fa.icons['music'],  # could also use the 'spotify' icon
     'steam': fa.icons['steam'],
     'subl': fa.icons['file-text-o'],
