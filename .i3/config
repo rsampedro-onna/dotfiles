@@ -345,3 +345,5 @@ bindsym $mod+n exec nautilus
 bindsym $mod+v exec ~/.vim-anywhere/bin/run
 bindsym $mod+u exec unity-control-center
 bindsym --release $mod+p exec gnome-screenshot --interactive
+# bindsym --release $mod+Shift+p exec gnome-screenshot --area --clipboard
+## couldn't ever get the line above to work.
