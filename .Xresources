@@ -4,11 +4,11 @@
 
 xterm*faceName:        DejaVu Sans Mono
 ! xterm*faceName:         Source Code Pro
-! I was using Droid Sans Mono before, but it doesn't support some IPA glyphs
-! I tested, and unfortunately xterm doesn't allow the use of fallback fonts.
+! I was using Droid Sans Mono before, but it doesnt support some IPA glyphs
+! I tested, and unfortunately xterm doesnt allow the use of fallback fonts.
 ! I then tested combining characters, and though sequences like "o" plus
 ! combining tilde do work, sequences such as mid-open vowel plus combining
-! tilde don't
+! tilde dont
 xterm*faceSize:        18
 xterm*loginShell:      false
 xterm*vt100*geometry:  140x40
