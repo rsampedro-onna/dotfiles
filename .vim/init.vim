@@ -93,11 +93,6 @@ let g:pathogen_disabled += ['vim-surround']
 let g:pathogen_disabled += ['smartpairs.vim']
 "}}}3
 
-" This seems to be broken in vim
-if !has('nvim')
-  let g:pathogen_disabled += ['vim-highlightedyank']
-endif
-
 " to load the plugins in the 'bundles' folder
 execute pathogen#infect()
 
@@ -411,9 +406,6 @@ endif
 " vim-highlightedyank {{{2
 if index(g:pathogen_disabled, 'vim-highlightedyank') == -1
   let g:highlightedyank_highlight_duration = 100
-  if !has('nvim')
-    map y <Plug>(highlightedyank)
-  endif
 endif
 "}}}2
 " vim-sneak {{{2
