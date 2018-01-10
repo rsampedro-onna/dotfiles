@@ -305,7 +305,7 @@ bindsym $mod+Left exec ~/bin/portrait-leftlandscape.sh
 #)))
 # keyboard and mouse settings (((
 # keyboard layout
-exec_always "sleep 2 ; ~/bin/keyboard-settings.sh ; sleep 1 ; ~/bin/xcape.sh ; ~/.i3/stops-and-starts-xcape.py"
+exec_always "sleep 3 ; ~/bin/keyboard-settings.sh ; sleep 1 ; ~/bin/xcape.sh ; ~/.i3/stops-and-starts-xcape.py"
 
 # mouse settings
 exec xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Tapping Enabled' 1
