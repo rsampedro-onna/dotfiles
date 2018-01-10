@@ -314,6 +314,7 @@ exec setxkbmap -option terminate:ctrl_alt_bksp \
                -option altwin:prsc_rwin \
                -option lv3:ralt_alt \
                -option lv3:space_switch
+exec_always ~/bin/options-for-md600.sh
 exec_always "sleep 1 ; ~/bin/xcape.sh ; ~/.i3/stops-and-starts-xcape.py"
 
 # mouse settings
