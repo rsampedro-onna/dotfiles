@@ -31,7 +31,7 @@ alias me_ip="arp -a | grep a6:24:39 | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,
 alias pdfgrep='pdfgrep --page-number'
 alias d1='DISPLAY=:1'
 alias sdcv='sdcv --color'
-alias pandoc='pandoc --latex-engine=xelatex -V geometry:margin=1in'
+alias pandoc='pandoc --pdf-engine=xelatex -V geometry:margin=1in'
 alias rate="upower -d | grep energy-rate"
 alias dc="rlwrap dc"
 alias cr="clear"
