@@ -138,7 +138,7 @@ URxvt.font:            xft:Hack:pixelsize=21,\
 ! URxvt.font:            xft:Symbola:pixelsize=21,
 ! URxvt.font:            xft:Monoid:pixelsize=24
 URxvt*letterSpace:     -1
-URxvt*perl-ext-common: default,matcher,-readline,-tabbed,font-size,fullscreen
+URxvt*perl-ext-common: default,matcher,-readline,-tabbed,font-size,fullscreen,-searchable-scrollback
 URxvt*url-launcher:    urlLauncher.sh
 URxvt*matcher.button:  1
 URxvt*scrollBar:       false
