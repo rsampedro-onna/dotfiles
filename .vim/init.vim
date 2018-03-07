@@ -544,6 +544,11 @@ if index(g:pathogen_disabled, 'vim-sandwich') == -1
   omap av <Plug>(textobj-sandwich-auto-a)
 endif
 "}}}2
+" csv.vim {{{2
+if index(g:pathogen_disabled, 'csv.vim') == -1
+  let g:csv_nomap_space = 1
+endif
+"}}}2
 "}}}1
 " Looks {{{1
 
