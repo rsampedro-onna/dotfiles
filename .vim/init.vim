@@ -457,7 +457,8 @@ if index(g:pathogen_disabled, 'comfortable-motion') == -1
   nnoremap <silent> <C-u> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * -2)<CR>
   nnoremap <silent> <C-f> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * 4)<CR>
   nnoremap <silent> <C-b> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * -4)<CR>
-
+  noremap <silent> <ScrollWheelDown> :call comfortable_motion#flick(40)<CR>
+  noremap <silent> <ScrollWheelUp>   :call comfortable_motion#flick(-40)<CR>
 endif
 "}}}2
 " vim-LanguageTool {{{2
