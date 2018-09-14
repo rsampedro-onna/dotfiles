@@ -875,7 +875,7 @@ function! s:toggle_language()
   endif
 endfunction
 
-nnoremap <silent> cop :call <SID>toggle_language()<CR>
+nnoremap <silent> coe :call <SID>toggle_language()<CR>
 
 highlight clear SpellBad
 highlight SpellBad term=standout ctermfg=1 term=underline cterm=underline
