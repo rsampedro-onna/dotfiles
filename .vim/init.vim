@@ -332,13 +332,26 @@ endif
 
 "}}}2
 " vim-flagship {{{2
-
 if index(g:pathogen_disabled, 'vim-flagship') == -1
- set laststatus=2
- set showtabline=2
- set guioptions-=e
-endif
 
+  function! MyId() abort
+    let servername = v:servername
+    if has('nvim')
+      if servername =~ 'nvimsocket'
+        let servername = fnamemodify(servername, ':t')
+      else
+        let servername = fnamemodify(servername, ':h:t')
+      endif
+    endif
+    return servername . (empty($SSH_TTY) ? '': '@'.substitute(hostname(), '\..*', '', ''))
+  endfunction
+
+  set laststatus=2
+  set showtabline=2
+  set guioptions-=e
+  let g:tabprefix = "%{MyId()}"
+
+endif
 "}}}2
 " unicode.vim {{{2
 if index(g:pathogen_disabled, 'unicode.vim') == -1
