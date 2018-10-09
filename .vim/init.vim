@@ -41,12 +41,12 @@ endif
 " Autocompletion 
 let g:pathogen_disabled += ['nvim-completion-manager']
 let g:pathogen_disabled += ['vim-simple-complete']
-if !has('nvim')
+" if !has('nvim')
   let g:pathogen_disabled += ['deoplete.nvim']
   let g:pathogen_disabled += ['deoplete-jedi']
-else
-  let g:pathogen_disabled += ['jedi.vim']
-endif
+" else
+"   let g:pathogen_disabled += ['jedi.vim']
+" endif
 
 " " OR
 "
