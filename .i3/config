@@ -240,9 +240,9 @@ mode "vim" {
   # manipulate text
   bindsym --release x exec xdotool key Delete
   bindsym --release Shift+x exec xdotool key BackSpace
-  # longer movement (41 keypresses)
-  set $down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down
-  set $up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up
+  # longer movement (30 keypresses)
+  set $down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down Down
+  set $up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up Up 
   bindsym --release e exec xdotool key $down
   bindsym --release u exec xdotool key $up
   # temporary libreoffice click location shortcut
